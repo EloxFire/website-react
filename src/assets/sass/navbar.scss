@@ -1,0 +1,15 @@
+@import "variables.scss";
+
+.navbarBody{
+  background-color: $backgroudColor;
+  height: 6vh;
+
+  .navbarLogo{
+    max-height: 4vh;
+  }
+  .navbarLink{
+    color: $white;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+}
