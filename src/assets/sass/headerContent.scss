@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+.headerContentBody{
+  height: 94vh;
+  background-color: $secondaryColor;
+
+  background-image: url("../img/stars.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: $white;
+
+  .headerContentTitle{
+    font-family: Ubuntu;
+    text-transform: uppercase;
+
+    span{
+      transition: .2s;
+      font-weight: 600;
+    }
+
+    &:hover{
+      span, .headerContentSubtitle{
+        color: $secondaryColor;
+      }
+    }
+  }
+  .headerContentLogo{
+    max-height: 15vh;
+  }
+  .headerContentSeparator{
+    width: 2px;
+    height: 13vh;
+    background-color: $white;
+  }
+  .headerContentContainer{
+    height: 94vh;
+  }
+}
