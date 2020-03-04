@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../sass/navbar.scss';
-import logoEA from '../img/ea.svg'
+import logoEA from '../img/ea.svg';
 import burgerMenuIcon from "../img/burgerMenuIcon.svg";
 
 interface NavbarProps{
@@ -10,7 +10,7 @@ interface NavbarProps{
 }
 
 const Navbar: React.FC<NavbarProps> = ({leftTitles, rightTitles}) => (
-  <div className="navbarBody col-12 d-flex flex-row align-items-center">
+  <div className="navbarBody col-12 d-flex flex-column align-items-center">
 
     <div className="col-12 d-none d-xs-none d-sm-none d-md-flex d-lg-flex flex-row">
       <div className="col-5 d-flex justify-content-start">

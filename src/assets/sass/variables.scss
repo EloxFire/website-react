@@ -3,14 +3,41 @@
 
 $backgroudColor: #121212;
 $secondaryColor: #9146FF;
+$stroke: #121212;
+$shadow: #9146FF;
 $lightWhite: rgba(#fcfcfc, .6);
 $white: #FCFCFC;
+$size: 4rem;
+$halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");
+
 
 *{
   font-family: Montserrat !important;
 }
 
-h1, h2, h3, h4, span{
+h1, h2, h3, h4, h5, h6, span{
   font-family: Ubuntu !important;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin stroke-width($property) {
+  -webkit-text-stroke-width: $property;
+  -moz-text-stroke-width: $property;
+}
+
+@mixin stroke-color($property) {
+  -webkit-text-stroke-color: $property;
+  -moz-text-stroke-color: $property;
+}
+
+@mixin background-clip($property) {
+  -webkit-background-clip: $property;
+  -moz-background-clip: $property;
+  background-clip: $property;
+}
+
+@mixin fill-color($property) {
+  -webkit-text-fill-color: $property;
+  -moz-text-fill-color: $property;
 }
