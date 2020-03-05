@@ -15,7 +15,7 @@ const HeaderContent: React.FC<HeaderContentProps> = ({quote}) => (
         <div className="headerContentSeparator ml-3 mr-3"></div>
       </div>
       <div className="d-flex flex-column">
-        <h1 className="headerContentTitle"><span>E</span>nzo <span>A</span>vagliano</h1>
+        <h1 className="headerContentTitle">Enzo Avagliano</h1>
         {quote.map(function(item,index){return <p className="headerContentSubtitle" key={index}>{item}</p>})}
       </div>
     </div>

@@ -38,3 +38,9 @@
     height: 94vh;
   }
 }
+
+@media screen and (max-width: 992px){
+  .headerContentTitle{
+    font-size: 2em;
+  }
+}

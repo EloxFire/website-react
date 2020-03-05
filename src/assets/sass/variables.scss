@@ -41,3 +41,57 @@ h1, h2, h3, h4, h5, h6, span{
   -webkit-text-fill-color: $property;
   -moz-text-fill-color: $property;
 }
+
+.heading {
+  font-size: $size;
+  letter-spacing: 6px;
+  margin: 2rem 0;
+
+  &--stroke {
+    @include stroke-width(2px);
+    @include stroke-color($stroke);
+    color: transparent;
+  }
+
+  &--shadow {
+    text-shadow: 6px 6px $shadow;
+  }
+
+  &--stroke-shadow {
+    text-shadow: -2px 0 $stroke, 0 -2px $stroke, 2px 0 $stroke, 0 2px $stroke, 2px 2px $stroke, -2px -2px $stroke, -2px 2px $stroke, 2px -2px $stroke, 6px 6px $shadow;
+  }
+
+  &--halftone {
+    position: relative;
+
+    &:after {
+      background: $halftone repeat;
+      @include stroke-width(0);
+      @include background-clip(text);
+      @include fill-color(transparent);
+      font-size: $size;
+      letter-spacing: 6px;
+      left: calc(50% + 6px);
+      top: calc(50% + 6px);
+      z-index: -1;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    &-color {
+      &:after {
+        background-color: $shadow;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .heading{
+    font-size: 2rem;
+
+    &--shadow {
+      text-shadow: 4px 4px $shadow;
+    }
+  }
+}
