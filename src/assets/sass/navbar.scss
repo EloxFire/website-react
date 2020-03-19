@@ -3,19 +3,25 @@
 .navbarBody{
   background-color: $backgroudColor;
   height: 6vh;
+  border-bottom: 1px solid $secondaryColor;
 
   .navbarLogo{
     max-height: 4vh;
   }
-  .navbarLink{
+  a, .navbarLink{
     color: $white;
     font-size: 1.2em;
     text-decoration: none;
+    text-decoration-color: $white;
     transition: .2s;
 
     &:hover{
       color: $secondaryColor;
     }
+  }
+
+  .dropdownLink{
+    color: $backgroudColor;
   }
 
   .purple-line-separator{

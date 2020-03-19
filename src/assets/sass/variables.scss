@@ -3,13 +3,9 @@
 
 $backgroudColor: #121212;
 $secondaryColor: #9146FF;
-$stroke: #121212;
-$shadow: #9146FF;
 $lightWhite: rgba(#fcfcfc, .6);
 $white: #FCFCFC;
-$size: 4rem;
-$halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");
-
+$black: #000000;
 
 *{
   font-family: Montserrat !important;
@@ -21,77 +17,33 @@ h1, h2, h3, h4, h5, h6, span{
   text-transform: uppercase;
 }
 
-@mixin stroke-width($property) {
-  -webkit-text-stroke-width: $property;
-  -moz-text-stroke-width: $property;
+.sectionTitlePurple{
+  color: $backgroudColor;
+  text-shadow: 3px 2px 0px $secondaryColor;
+  letter-spacing: 4px;
+  font-size: 3.2em;
 }
 
-@mixin stroke-color($property) {
-  -webkit-text-stroke-color: $property;
-  -moz-text-stroke-color: $property;
-}
+.sectionTitlePurpleWithBorder{
+  color: $backgroudColor;
+  text-shadow: 3px 2px 0px $secondaryColor;
+  letter-spacing: 4px;
+  font-size: 3.2em;
+  margin-left: 2.5vw !important;
 
-@mixin background-clip($property) {
-  -webkit-background-clip: $property;
-  -moz-background-clip: $property;
-  background-clip: $property;
-}
-
-@mixin fill-color($property) {
-  -webkit-text-fill-color: $property;
-  -moz-text-fill-color: $property;
-}
-
-.heading {
-  font-size: $size;
-  letter-spacing: 6px;
-  margin: 2rem 0;
-
-  &--stroke {
-    @include stroke-width(2px);
-    @include stroke-color($stroke);
-    color: transparent;
-  }
-
-  &--shadow {
-    text-shadow: 6px 6px $shadow;
-  }
-
-  &--stroke-shadow {
-    text-shadow: -2px 0 $stroke, 0 -2px $stroke, 2px 0 $stroke, 0 2px $stroke, 2px 2px $stroke, -2px -2px $stroke, -2px 2px $stroke, 2px -2px $stroke, 6px 6px $shadow;
-  }
-
-  &--halftone {
+  &::before{
+    display: block;
     position: relative;
-
-    &:after {
-      background: $halftone repeat;
-      @include stroke-width(0);
-      @include background-clip(text);
-      @include fill-color(transparent);
-      font-size: $size;
-      letter-spacing: 6px;
-      left: calc(50% + 6px);
-      top: calc(50% + 6px);
-      z-index: -1;
-      position: absolute;
-      transform: translate(-50%, -50%);
-    }
-
-    &-color {
-      &:after {
-        background-color: $shadow;
-      }
-    }
+    content: '';
+    background-color: $secondaryColor;
+    width: 50%;
+    height: 5px;
+    border-radius: 100px;;
   }
 }
 
-@media screen and (max-width: 992px){
-  .heading{
-    font-size: 2rem;
 
-    &--shadow {
-      text-shadow: 4px 4px $shadow;
-    }
-  }
+.cardTitleSlash{
+  font-size: 1.5em;
+  text-shadow: 5px 5px 0px $secondaryColor;
 }

@@ -15,13 +15,13 @@ const Navbar: React.FC<NavbarProps> = ({leftTitles, rightTitles}) => (
 
     <div className="col-12 d-none d-xs-none d-sm-none d-md-flex d-lg-flex flex-row align-items-center">
       <div className="col-5 d-flex justify-content-start">
-        {leftTitles.map(function(item,index){return <Link to={`/${item}`}><a key={index} className="m-2 navbarLink" href="/">{item}</a></Link>})}
+        {leftTitles.map(function(item,index){return <Link key={index} to={`/${item}`}><p key={index} className="m-2 navbarLink">{item}</p></Link>})}
       </div>
       <div className="col-2 d-flex justify-content-center align-items-center">
         <img className="navbarLogo" src={logoEA} alt="Enzo Avagliano's logo"/>
       </div>
       <div className="col-5 d-flex justify-content-end align-items-center">
-        {rightTitles.map(function(item,index){return <Link to={`/${item}`}><a key={index} className="m-2 navbarLink" href="/">{item}</a></Link>})}
+        {rightTitles.map(function(item,index){return <Link key={index} to={`/${item}`}><p key={index} href="/" className="m-2 navbarLink">{item}</p></Link>})}
       </div>
     </div>
 
@@ -32,8 +32,8 @@ const Navbar: React.FC<NavbarProps> = ({leftTitles, rightTitles}) => (
           <img className="navbarLogo" src={burgerMenuIcon} alt="Burger menu icon"/>
         </button>
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          {leftTitles.map(function(item,index){return <Link to={`/${item}`}><a key={index} className="m-2 navbarLink" href="/">{item}</a></Link>})}
-          {rightTitles.map(function(item,index){return <Link to={`/${item}`}><a key={index} className="m-2 navbarLink" href="/">{item}</a></Link>})}
+          {leftTitles.map(function(item,index){return <Link key={index} to={`/${item}`}><p key={index} href="/" className="m-2 navbarLink dropdownLink" >{item}</p></Link>})}
+          {rightTitles.map(function(item,index){return <Link key={index} to={`/${item}`}><p key={index} href="/" className="m-2 navbarLink dropdownLink">{item}</p></Link>})}
         </div>
       </div>
     </div>

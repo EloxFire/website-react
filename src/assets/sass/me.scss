@@ -1,0 +1,21 @@
+@import "variables.scss";
+@import "tech.scss";
+
+
+#meBody{
+  margin: 10vh 10vh 3vw 3vw;
+  padding: 1em;
+  height: auto;
+  border: 5px solid $secondaryColor;
+
+  background: $white;
+  background: linear-gradient(60deg, rgba(0,0,0,0) 50%, $secondaryColor 50%, $secondaryColor 100%);
+
+  p{
+    font-size: 1.2em;
+  }
+
+  .presText{
+    padding-right: 10px;
+  }
+}

@@ -2,17 +2,22 @@
 
 
 .techContentBody{
-  height: 30vh;
-  background-color: $white;
-
-  .techImage{
-    height: 10vh;
-    width: 10vh;
-  }
+  height: auto;
+  margin-top: 3vh;
 
   .techTitleContainer{
     span{
       font-size: 1.5em;
     }
+  }
+}
+
+.cardContainer{
+  .cardImage{
+    max-height: 10vh;
+  }
+  .cardTitle{
+    font-size: 1.2em;
+    font-weight: 600;
   }
 }
