@@ -17,11 +17,29 @@ h1, h2, h3, h4, h5, h6, span{
   text-transform: uppercase;
 }
 
+p{
+  font-size: 1.2em;
+}
+
 .sectionTitlePurple{
   color: $backgroudColor;
   text-shadow: 3px 2px 0px $secondaryColor;
   letter-spacing: 4px;
   font-size: 3.2em;
+}
+
+.littleSectionTitlePurple{
+  color: $backgroudColor;
+  text-shadow: 3px 2px 0px $secondaryColor;
+  letter-spacing: 4px;
+  font-size: 1.5em;
+}
+
+.littleSectionTitleWhite{
+  color: $backgroudColor;
+  text-shadow: 3px 2px 0px $white;
+  letter-spacing: 4px;
+  font-size: 1.5em;
 }
 
 .sectionTitlePurpleWithBorder{

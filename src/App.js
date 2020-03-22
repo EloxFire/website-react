@@ -5,6 +5,8 @@ import Navbar from './assets/components/Navbar.jsx';
 import HeaderContent from './assets/components/HeaderContent.jsx';
 import TechContent from './assets/components/Techs.jsx';
 import Me from './assets/components/Me.jsx';
+import Work from './assets/components/Work.jsx';
+import Footer from './assets/components/Footer.jsx';
 
 import TrophyHeader from './assets/components/trophy/TrophyHeader.jsx';
 
@@ -12,7 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar leftTitles={["Home", "Work", "Blog"]} rightTitles={["Blinxon", "Contact"]}/>
+        <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Contact"]}/>
         <Switch>
 
           <Route path="/" exact component={props =>
@@ -31,12 +33,19 @@ function App() {
             </div>
           }/>
 
+          <Route path="/Work" component={props =>
+            <div>
+              <Work/>
+            </div>
+          }/>
+
           <Route path="/Blinxon" component={props =>
             <div>
               <TrophyHeader/>
             </div>
           }/>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

@@ -3,19 +3,25 @@
 
 
 #meBody{
-  margin: 10vh 10vh 3vw 3vw;
+  margin-top: 10vh;
   padding: 1em;
   height: auto;
-  border: 5px solid $secondaryColor;
 
-  background: $white;
-  background: linear-gradient(60deg, rgba(0,0,0,0) 50%, $secondaryColor 50%, $secondaryColor 100%);
+  // background: $white;
+  // background: linear-gradient(60deg, rgba(0,0,0,0) 50%, $secondaryColor 50%, $secondaryColor 100%);
 
-  p{
-    font-size: 1.2em;
+  .aboutMe{
+    padding: 1rem;
+    border: 5px solid $secondaryColor;
   }
 
-  .presText{
-    padding-right: 10px;
+  .keyData{
+    padding: 1rem;
+    border: 5px solid $secondaryColor;
+    background-color: $secondaryColor;
+
+    .aboutDataContainer{
+      height: 70%;
+    }
   }
 }

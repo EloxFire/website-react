@@ -1,0 +1,15 @@
+@import "variables.scss";
+
+#work{
+  margin: 0;
+  padding: 0;
+  padding-top: 3vh;
+
+  .workBody{
+    border: 1px solid $secondaryColor;
+  }
+
+  .card{
+    width: 25%;
+  }
+}
