@@ -1,15 +1,28 @@
 @import "variables.scss";
 
 #work{
-  margin: 0;
-  padding: 0;
-  padding-top: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 
-  .workBody{
-    border: 1px solid $secondaryColor;
+  .repoContainer{
+    max-height: 72vh !important;
+    overflow: auto;
   }
 
-  .card{
-    width: 25%;
+  .card-img-top{
+    max-width: 10vh !important;
+    max-height: 10vh !important;
+  }
+
+  .card-title{
+    border-bottom: 3px solid $secondaryColor;
+  }
+
+  .list-group-item{
+    border-color: $secondaryColor !important;
+  }
+
+  .btn{
+    background-color: $secondaryColor !important;
   }
 }

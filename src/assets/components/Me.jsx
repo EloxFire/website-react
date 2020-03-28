@@ -18,10 +18,11 @@ class Me extends Component{
     user: {}
   }
 
-  getUser = () => {
+  componentDidMount(){
     fetch("https://api.github.com/users/EloxFire")
     .then(response => response.json())
     .then(data => {
+      console.log(data);
       this.setState({
         user: {
           name: data.name,
@@ -55,7 +56,6 @@ class Me extends Component{
               <AboutCard title="19" subtitle="years old"/>
               <AboutCard title="2" subtitle="hobbies"/>
               <AboutCard title="1" subtitle="code editor"/>
-              {this.getUser()}
               <GitData user={user}/>
             </div>
           </div>
