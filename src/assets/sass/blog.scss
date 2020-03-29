@@ -1,7 +1,33 @@
-#blog{
-  height: 90vh;
+@import "variables.scss";
 
-  .blog-content-container{
-    margin-top: 2vh;
+#blog{
+  height: 86.8vh;
+
+  .blogBoxHome{
+    padding: 1rem;
+    border: 5px solid $secondaryColor;
+  }
+}
+
+#firstyear{
+  height: 80vh;
+  overflow: auto;
+}
+
+.blogTitlePurpleWithBorder{
+  color: $backgroudColor;
+  text-shadow: 3px 2px 0px $secondaryColor;
+  letter-spacing: 4px;
+  font-size: 2.2em;
+  margin-left: 2.5vw !important;
+
+  &::before{
+    display: block;
+    position: relative;
+    content: '';
+    background-color: $secondaryColor;
+    width: 50%;
+    height: 5px;
+    border-radius: 100px;;
   }
 }
