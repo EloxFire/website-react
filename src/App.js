@@ -6,7 +6,7 @@ import HeaderContent from './assets/components/HeaderContent.jsx';
 import TechContent from './assets/components/Techs.jsx';
 import Me from './assets/components/Me.jsx';
 import Work from './assets/components/Work.jsx';
-import Blog from './assets/components/Blog.jsx';
+import BlogNav from './assets/components/blog/BlogNav.jsx';
 import Footer from './assets/components/Footer.jsx';
 
 import TrophyHeader from './assets/components/trophy/TrophyHeader.jsx';
@@ -42,7 +42,7 @@ function App() {
 
           <Route path="/Blog" component={props =>
             <div>
-              <Blog/>
+              <BlogNav titles={["First year", "Second year"]} where={["firstyear", "secondyear"]}/>
             </div>
           }/>
 
