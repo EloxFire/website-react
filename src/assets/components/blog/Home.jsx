@@ -8,8 +8,8 @@ import '../../sass/blog.scss';
 class Home extends Component{
   render(){
     return(
-      <div id="fy" className="pt-5">
-
+      <div id="blog" className="pt-5">
+        test
       </div>
     )
   }

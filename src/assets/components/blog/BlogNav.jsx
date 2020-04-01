@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import '../../sass/blog/nav.scss'
+import '../../sass/blog/nav.scss';
 
 interface NavBlogProps{
   titles: String[],
@@ -11,15 +11,14 @@ const BlogNav: React.FC<NavBlogProps> = ({titles, where}) => (
     <div className="d-none d-xs-none d-sm-none d-md-flex d-lg-flex">
       {titles.map(function(item, index){
         return(
-          <div>
-            <Link to={where.map(function(where, number){return(where)})}>{item}</Link>
-          </div>
+          <Link to={item.toLowerCase().replace(/\s/g, '')}>{item}</Link>
         )
       })}
     </div>
     <div className="d-flex d-xs-flex d-sm-flex d-md-none d-lg-none">
 
     </div>
+
   </div>
 )
 export default BlogNav;
