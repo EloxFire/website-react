@@ -6,7 +6,8 @@ import HeaderContent from './assets/components/HeaderContent.jsx';
 import TechContent from './assets/components/Techs.jsx';
 import Me from './assets/components/Me.jsx';
 import Work from './assets/components/Work.jsx';
-import BlogNav from './assets/components/blog/BlogNav.jsx';
+import Contact from './assets/components/Contact.jsx';
+//import BlogNav from './assets/components/blog/BlogNav.jsx';
 import Home from './assets/components/blog/Home.jsx';
 import Footer from './assets/components/Footer.jsx';
 
@@ -27,7 +28,7 @@ function App() {
             </div>
           }/>
 
-          <Route path="/Home" component={props =>
+          <Route path="/home" component={props =>
             <div>
               <HeaderContent quote={["Student | Junior Web Developper"]}/>
               <TechContent/>
@@ -35,22 +36,34 @@ function App() {
             </div>
           }/>
 
-          <Route path="/Work" component={props =>
+          <Route path="/work" component={props =>
             <div>
               <Work/>
             </div>
           }/>
 
-          <Route path="/Blog" component={props =>
+          <Route path="/blog" component={props =>
             <div>
-              <BlogNav titles={["First year", "Second year"]} where={["firstyear", "secondyear"]}/>
+              {/*<BlogNav titles={["First year", "Second year"]} where={["firstyear", "secondyear"]}/>*/}
               <Home/>
             </div>
           }/>
 
-          <Route path="/Blinxon" component={props =>
+          <Route path="/contact" component={props =>
+            <div>
+              <Contact/>
+            </div>
+          }/>
+
+          <Route path="/blinxon" component={props =>
             <div>
               <TrophyHeader/>
+            </div>
+          }/>
+
+          <Route path="/arch" component={props =>
+            <div>
+              {/*<Arch/>*/}
             </div>
           }/>
         </Switch>

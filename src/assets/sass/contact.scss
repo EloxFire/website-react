@@ -1,0 +1,10 @@
+@import "variables.scss";
+@import "./blog/blog.scss";
+
+#contact{
+  height: 92vh;
+
+  .negativeTitle{
+    margin-left: -2.5vw !important;
+  }
+}
