@@ -4,7 +4,27 @@
 #contact{
   height: 92vh;
 
+  label::after{
+    content: " *";
+    color: red;
+  }
+  .required{
+    color: red;
+  }
+
   .negativeTitle{
     margin-left: -2.5vw !important;
+  }
+
+  .querry{
+    border-bottom: 2px solid $secondaryColor;
+
+    .ok{
+      color: green;
+    }
+
+    .notok{
+      color: red;
+    }
   }
 }

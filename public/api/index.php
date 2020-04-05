@@ -5,27 +5,30 @@ $_POST = json_decode($rest_json, true);
 
 if (empty($_POST['username']) && empty($_POST['usermail'])){
   die();
-  console_log('Fields are empty');
   exit();
 }else if(!empty($_POST['username']) && !empty($_POST['usermail'])){
   http_response_code(200);
   $subject = $_POST['userobject'];
   $to = "enzo.avagliano@ynov.com";
   $from = $_POST['usermail'];
-  $msg = $_POST['usermessage'];
-  $headers = "Vous avez reçu un message de la part de : " . $from . " !";
+  $msg = "<p style='margin-top:20px;'>". $_POST['usermessage'] ."</p>";
+  $headers = "MIME-Version: 1.0\r\n";
+	$headers.= "Content-type: text/html; charset=UTF-8\r\n";
+  $headers.= "<h1>Nouveau message depuis <code>enzo.avagliano.fr</code> !</h1>";
+  $headers.= "<h4 style='margin:0;'>Email : " . $from . "</h4>";
+  $headers.= "<h4 style='margin:0;'>Autheur : " . $_POST['username'] . "</h4>";
+  $headers.= "<h4 style='margin:0;'>Objet : " . $subject . "</h4>";
+  $headers.= "<br/>";
   mail($to, $subject, $msg, $headers);
   echojson_encode(array(
     "sent" => true
   ));
-  console_log('Mail sent to :' . $to);
   exit();
 }else{
   echojson_encode(array(
     "sent" => false
   ));
   echo "Something went wrong";
-  console_log('Something went wrong');
   exit();
 }
 // if (empty($_POST['name']) && empty($_POST['mail'])) die();
