@@ -7,7 +7,7 @@ class Footer extends Component{
     let copy = '©';
     return(
       <div id="footer" className="footer text-center">
-        <p>{copy} 2020 | Enzo Avagliano | All right reserved | <Link to="Arch">Plan du site</Link></p>
+        <p>{copy} 2020 | Enzo Avagliano | All right reserved</p>
       </div>
     )
   }

@@ -33,6 +33,10 @@ class Contact extends Component{
     .catch(error => this.setState({error: error.message}));
   };
 
+  componentDidMount(){
+    document.title = "Enzo Avagliano - Contact";
+  }
+
   render(){
     return(
       <div id="contact" className="container d-flex align-items-center"> {/*ADD CONTAINER CLASS HERE*/}

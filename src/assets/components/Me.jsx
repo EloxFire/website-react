@@ -19,6 +19,7 @@ class Me extends Component{
   }
 
   componentDidMount(){
+    document.title = "Enzo Avagliano - Home";
     fetch("https://api.github.com/users/EloxFire")
     .then(response => response.json())
     .then(data => {

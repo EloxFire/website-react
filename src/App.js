@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Navbar from './assets/components/Navbar.jsx';
@@ -13,64 +13,70 @@ import Footer from './assets/components/Footer.jsx';
 
 import TrophyHeader from './assets/components/trophy/TrophyHeader.jsx';
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Contact"]}/>
-        <Switch>
+class App extends Component{
+  componentDidMount(){
+    document.title = "Enzo Avagliano - Home";
+  }
 
-          <Route path="/" exact component={props =>
-            <div>
-              <HeaderContent quote={["Student | Junior Web Developper"]}/>
-              <TechContent/>
-              <Me/>
-            </div>
-          }/>
+  render(){
+    return (
+      <Router>
+        <div>
+          <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Contact"]}/>
+          <Switch>
 
-          <Route path="/home" component={props =>
-            <div>
-              <HeaderContent quote={["Student | Junior Web Developper"]}/>
-              <TechContent/>
-              <Me/>
-            </div>
-          }/>
+            <Route path="/" exact component={props =>
+              <div>
+                <HeaderContent quote={["Student | Junior Web Developper"]}/>
+                <TechContent/>
+                <Me/>
+              </div>
+            }/>
 
-          <Route path="/work" component={props =>
-            <div>
-              <Work/>
-            </div>
-          }/>
+            <Route path="/home" component={props =>
+              <div>
+                <HeaderContent quote={["Student | Junior Web Developper"]}/>
+                <TechContent/>
+                <Me/>
+              </div>
+            }/>
 
-          <Route path="/blog" component={props =>
-            <div>
-              {/*<BlogNav titles={["First year", "Second year"]} where={["firstyear", "secondyear"]}/>*/}
-              <Home/>
-            </div>
-          }/>
+            <Route path="/work" component={props =>
+              <div>
+                <Work/>
+              </div>
+            }/>
 
-          <Route path="/contact" component={props =>
-            <div>
-              <Contact/>
-            </div>
-          }/>
+            <Route path="/blog" component={props =>
+              <div>
+                {/*<BlogNav titles={["First year", "Second year"]} where={["firstyear", "secondyear"]}/>*/}
+                <Home/>
+              </div>
+            }/>
 
-          <Route path="/blinxon" component={props =>
-            <div>
-              <TrophyHeader/>
-            </div>
-          }/>
+            <Route path="/contact" component={props =>
+              <div>
+                <Contact/>
+              </div>
+            }/>
 
-          <Route path="/arch" component={props =>
-            <div>
-              {/*<Arch/>*/}
-            </div>
-          }/>
-        </Switch>
-        <Footer/>
-      </div>
-    </Router>
-  );
+            <Route path="/blinxon" component={props =>
+              <div>
+                <TrophyHeader/>
+              </div>
+            }/>
+
+            <Route path="/arch" component={props =>
+              <div>
+                {/*<Arch/>*/}
+              </div>
+            }/>
+          </Switch>
+          <Footer/>
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App;

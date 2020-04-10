@@ -15,6 +15,7 @@ class Work extends Component{
   }
 
   componentDidMount(){
+    document.title = "Enzo Avagliano - Work";
     Promise.all([
         fetch(reposUrl),
         fetch(userUrl)
