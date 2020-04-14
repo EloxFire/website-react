@@ -9,17 +9,9 @@
     height: 5px !important;
     background-color: $secondaryColor;
   }
-}
 
-// .title-container{
-//   width: 100%;
-//   height: 100%;
-//   background-image: url("../../img/blog/background.svg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-//   background-clip: content-box;
-//   h1{
-//     color: $secondaryColor;
-//   }
-// }
+  .card-img{
+    height: 10vh;
+    width: 10vh;
+  }
+}

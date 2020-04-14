@@ -52,7 +52,7 @@ class Work extends Component{
                 <li className="list-group-item">Followers : {user.followers}</li>
               </ul>
 
-              <a target="_blank" rel="noopener noreferrer" href={user.html_url} className="btn btn-primary mt-1">Go to profil</a>
+              <a target="_blank" rel="noopener noreferrer" href={user.html_url} className="btn btn-primary mt-xs-1 mt-sm-1 mt-md-3 mt-lg-3">Go to profil</a>
             </div>
           </div>
 

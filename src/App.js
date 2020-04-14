@@ -11,6 +11,8 @@ import Contact from './assets/components/Contact.jsx';
 import Home from './assets/components/blog/Home.jsx';
 import Footer from './assets/components/Footer.jsx';
 
+import Devdeas from './assets/components/Devdeas.jsx';
+
 import TrophyHeader from './assets/components/trophy/TrophyHeader.jsx';
 
 class App extends Component{
@@ -22,7 +24,7 @@ class App extends Component{
     return (
       <Router>
         <div>
-          <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Contact"]}/>
+          <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
           <Switch>
 
             <Route path="/" exact component={props =>
@@ -63,6 +65,12 @@ class App extends Component{
             <Route path="/blinxon" component={props =>
               <div>
                 <TrophyHeader/>
+              </div>
+            }/>
+
+            <Route path="/devdeas" component={props =>
+              <div>
+                <Devdeas/>
               </div>
             }/>
 
