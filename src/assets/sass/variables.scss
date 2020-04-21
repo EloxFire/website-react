@@ -84,3 +84,24 @@ p{
   font-size: 1.5em;
   text-shadow: 5px 5px 0px $secondaryColor;
 }
+
+#comingSoon{
+  height: 92vh;
+  .title-container{
+    height: 100%;
+    background-image: url("../img/blog/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    h1{
+      color: $secondaryColor;
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  #comingSoon{
+    height: 86.2vh;
+  }
+}

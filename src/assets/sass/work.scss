@@ -31,7 +31,7 @@
   }
 
   .cardLimited{
-    max-height: 70vh !important;
+    max-height: 75vh !important;
   }
 
   .sticky-top{
@@ -43,5 +43,11 @@
       max-height: 100%;
       max-width: 100%;
     }
+  }
+}
+
+@media screen and(max-width:992px) {
+  .cardLimited{
+    overflow: auto;
   }
 }

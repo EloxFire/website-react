@@ -2,9 +2,38 @@
 @import 'showcase.scss';
 
 #usersShare{
-  .stepsContainer{
-    .devdeasCardUser{
-      height: 30vh;
+  .sectionTitle{
+    color: $secondaryColor;
+    span{
+      color: $black;
     }
+  }
+  .stepsContainer{
+
+    .devdeasCardUser{
+      height: 25vh;
+      width: 25vh;
+      background: #fff;
+      border: .5px solid rgba(0, 0, 0, .3);
+      border-radius: 20px;
+      transition: .3s;
+      &:hover{
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+
+      }
+      &:focus{
+        box-shadow: none !important;
+      }
+    }
+
+    .textUser{
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  #usersShare{
+
   }
 }

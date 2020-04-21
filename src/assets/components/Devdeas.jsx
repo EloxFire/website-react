@@ -7,7 +7,6 @@ class Devdeas extends Component{
     return(
       <div id="devdeas">
         <Showcase/>
-        <UsersPage/>
       </div>
     )
   }

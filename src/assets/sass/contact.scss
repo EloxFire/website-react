@@ -3,12 +3,10 @@
 
 #contact{
   height: 92vh;
+  padding-top: 3vh;
 
-  label::after{
+  .required::after{
     content: " *";
-    color: red;
-  }
-  .required{
     color: red;
   }
 
@@ -25,6 +23,15 @@
 
     .notok{
       color: red;
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  #contact{
+    overflow: auto;
+    .contactT{
+      font-size: 3em !important;
     }
   }
 }
