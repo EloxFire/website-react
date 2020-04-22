@@ -1,0 +1,32 @@
+@import "../variables.scss";
+
+.bnavbarBody{
+  background-color: $blinxonRed;
+  height: 6vh;
+  border-bottom: 1px solid $blinxonBeige;
+
+  .navbarLogo{
+    max-height: 4vh;
+  }
+  a, .navbarLink{
+    color: $white;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-decoration-color: $white;
+    transition: .2s;
+
+    &:hover{
+      color: $blinxonBeige;
+    }
+  }
+
+  .dropdownLink{
+    color: $backgroudColor;
+  }
+
+  .purple-line-separator{
+    height: 1vh;
+    width: 100vw;
+    background-color: $blinxonBeige;
+  }
+}

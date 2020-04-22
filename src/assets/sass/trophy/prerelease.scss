@@ -1,0 +1,81 @@
+@import "../variables.scss";
+@font-face {
+  font-family: 'Osaka';
+  src: url("../../fonts/Osaka.ttf");
+}
+
+#pre{
+  padding: 0;
+  margin: 0;
+  height: 91vh;
+
+  background-image: url("../../img/trophy/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: $blinxonRed;
+
+  .blinxon{
+    font-family: 'Osaka' !important;
+  }
+  .blinxonName{
+    padding: 0;
+    margin: 0;
+    font-size: 7em;
+    color: $blinxonBeige;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 2px black;
+  }
+  .blinxonSubtitle{
+    padding: 0;
+    margin: 0;
+    color: $blinxonBeige;
+    padding-top: 50px;
+    margin-bottom: -10px;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+  }
+
+  .countdownContainer{
+    margin-top: 15vh;
+    height: 20vh;
+
+    .countdown{
+      font-size: 4em;
+      .countdownSpan{
+        font-size: .5em;
+      }
+    }
+    .countdownDescription{
+      color: $blinxonBeige;
+      margin: 0;
+      padding: 0;
+      font-size: 3em;
+    }
+  }
+
+  .accessBlinxonSections{
+    .followText{
+      font-size: 3em;
+      color: $blinxonBeige;
+    }
+    .blinxonButtonSections{
+      color: black;
+      border: 2px solid $blinxonBeige;
+      background-color: $blinxonRed;
+      font-size: 1.5em;
+      transition: .3s;
+
+      &:hover{
+        background-color: $blinxonBeige;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:992px){
+  .blinxonName{
+    font-size: 4em !important;
+  }
+}

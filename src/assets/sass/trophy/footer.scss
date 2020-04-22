@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+#bfooter{
+  height: 3vh;
+  background-color: $blinxonRed;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $blinxonBeige;
+
+  p, a{
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+    color: $blinxonBeige;
+  }
+}
