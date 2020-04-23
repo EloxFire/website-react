@@ -21,8 +21,8 @@ class PreRelease extends Component{
   render(){
     return(
       <div id="pre" className="col-12 d-flex flex-row justify-content-center">
-        <div className="col-6"></div>
-        <div className="col-6 text-center">
+        <div className="col-6 notDisplayed"></div>
+        <div className="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
           <p className="blinxon blinxonSubtitle">Bienvenue sur notre site</p>
           <h1 className="blinxon blinxonName">Blinxon</h1>
 
@@ -37,7 +37,7 @@ class PreRelease extends Component{
             <div>
               <p className="blinxon followText">Suivez notre aventure !</p>
             </div>
-            <div className="col-12 d-flex flex-wrap justify-content-around">
+            <div className="blinxonButtonContainer col-12 d-flex flex-wrap justify-content-around">
               <button className="blinxon btn blinxonButtonSections mt-2 mb-2">L'equipage</button>
               <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Enfants du desert</button>
               <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Pourquoi nous aider</button>

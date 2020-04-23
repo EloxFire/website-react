@@ -1,13 +1,10 @@
 @import "../variables.scss";
-@font-face {
-  font-family: 'Osaka';
-  src: url("../../fonts/Osaka.ttf");
-}
 
 #pre{
   padding: 0;
   margin: 0;
-  height: 91vh;
+  min-height: 91vh;
+  max-height: auto;
 
   background-image: url("../../img/trophy/background.png");
   background-position: center;
@@ -74,8 +71,45 @@
   }
 }
 
-@media screen and (max-width:992px){
+@media screen and (max-width:778px){
+  #pre{
+    background-image: url("../../img/trophy/backgroundMobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: $blinxonRed;
+  }
+
+  .notDisplayed{
+    display: none;
+  }
+
+  .blinxonSubtitle{
+    font-size: 1em !important;
+  }
   .blinxonName{
-    font-size: 4em !important;
+    font-size: 3em !important;
+  }
+
+  .countdownContainer{
+    margin: 0 !important;
+    .countdownDescription{
+      font-size: 1em !important;
+    }
+    .countdown{
+      font-size: 1.5em !important;
+    }
+  }
+
+  .followText{
+    margin-top: 0 !important;
+    font-size: 1.5em !important;
+  }
+
+  .blinxonButtonContainer{
+    .blinxonButtonSections{
+      width: 90%;
+    }
   }
 }
