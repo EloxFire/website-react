@@ -28,7 +28,7 @@ class PreRelease extends Component{
 
           <div className="countdownContainer col-12 d-flex flex-row justify-content-center align-items-center">
             <div>
-              <p className="blinxon countdownDescription">Depart du 4L Trophy 2021 dans :</p>
+              <p className="blinxon countdownDescription">Départ du 4L Trophy 2021 dans :</p>
               <Countdown date={new Date("2021-02-18")} renderer={renderer} />
             </div>
           </div>
@@ -38,8 +38,8 @@ class PreRelease extends Component{
               <p className="blinxon followText">Suivez notre aventure !</p>
             </div>
             <div className="blinxonButtonContainer col-12 d-flex flex-wrap justify-content-around">
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">L'equipage</button>
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Enfants du desert</button>
+              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">L'équipage</button>
+              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Enfants du désert</button>
               <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Pourquoi nous aider</button>
               <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Comment nous aider</button>
             </div>

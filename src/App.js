@@ -58,7 +58,6 @@ class App extends Component{
 
             <Route path="/work" component={props =>
               <div>
-                <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
                 <Work/>
               </div>
             }/>

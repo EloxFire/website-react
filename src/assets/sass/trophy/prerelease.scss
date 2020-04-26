@@ -3,7 +3,7 @@
 #pre{
   padding: 0;
   margin: 0;
-  min-height: 91vh;
+  min-height: 96vh;
   max-height: auto;
 
   background-image: url("../../img/trophy/background.png");
@@ -13,8 +13,10 @@
 
   background-color: $blinxonRed;
 
+  border-bottom: 2px solid $blinxonBeige;
+
   .blinxon{
-    font-family: 'Osaka' !important;
+    font-family: 'Osaka Chips' !important;
   }
   .blinxonName{
     padding: 0;
@@ -73,6 +75,7 @@
 
 @media screen and (max-width:778px){
   #pre{
+    font-family: 'Osaka Chips' !important;
     background-image: url("../../img/trophy/backgroundMobile.png");
     background-position: center;
     background-repeat: no-repeat;

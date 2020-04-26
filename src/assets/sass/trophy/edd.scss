@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+#edd{
+  .eddTitle{
+    padding: 0;
+    margin: 0;
+    font-family: 'Osaka Chips' !important;
+    font-size: 5em !important;
+    -webkit-text-stroke: 1.5px black;
+    letter-spacing: 1px;
+    color: $blinxonBeige;
+    background-color: $blinxonRed;
+    border-radius: 20px;
+    height: 110px;
+  }
+}
+
+
+@media screen and (max-width:992px) {
+  #edd{
+    height: auto !important;
+    margin-bottom: 7vh;
+    .eddTitle{
+      padding-top: 1.5vh !important;
+      font-size: 2.5em !important;
+      height: 80px !important;
+    }
+  }
+}
