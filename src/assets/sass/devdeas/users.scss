@@ -2,34 +2,32 @@
 @import 'showcase.scss';
 
 #usersShare{
-  .sectionTitle{
+  .devdeasSectionTitle{
+    padding: 0;
+    margin: 0;
     color: $secondaryColor;
+    font-size: 3em;
     span{
-      color: $black;
+      color: black;
     }
   }
-  .stepsContainer{
 
-    .devdeasCardUser{
-      height: 25vh;
-      width: 25vh;
-      background: #fff;
-      border: .5px solid rgba(0, 0, 0, .3);
-      border-radius: 20px;
-      transition: .3s;
-      &:hover{
-        box-shadow: 0 0 11px rgba(33,33,33,.2);
+  .actionButton{
+    width: 25vh;
+    height: 25vh;
+    border: 1px solid rgba(#000, 0.2);
+    border-radius: 50px;
+    transition: .3s;
 
-      }
-      &:focus{
-        box-shadow: none !important;
-      }
-    }
-
-    .textUser{
-      font-size: 1.5em;
+    &:hover{
+      box-shadow: -1px 0 rgba(#000, 0.2), 0 1px rgba(#000, 0.2), 1px 0 rgba(#000, 0.2), 0 -1px rgba(#000, 0.2);
     }
   }
+
+  .usersMb{
+    margin-bottom: 15vh;
+  }
+
 }
 
 @media screen and (max-width:992px) {
