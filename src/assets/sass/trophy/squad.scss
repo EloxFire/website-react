@@ -88,6 +88,10 @@
   // color: $blinxonRed;
 }
 
+.endSection{
+  margin-bottom: 15vh !important;
+}
+
 @media screen and (max-width:992px) {
   #squad{
     height: auto !important;
@@ -97,8 +101,11 @@
       height: 80px !important;
     }
 
-    .aboutUs, .aboutIndividualContainer{
+    .aboutUs{
       height: auto !important;
+    }
+    .aboutIndividualContainer{
+      height: 100vh !important;
     }
 
     .oliPic, .enzoPic{

@@ -10,30 +10,56 @@ class Edd extends Component{
         </div>
 
         <div className="col-12 d-flex flex-column flex-xs-column flex-sm-column flex-md-row flex-lg-row justify-content-center mt-5">
-          <div className="aboutUs mt-2 mb-2 d-flex flex-column col-12 col-xs-12 col-sm-12 col-md-5 col-lg-5 m-2">
+          <div className="aboutEdd mt-2 mb-2 d-flex flex-column col-12 col-xs-12 col-sm-12 col-md-5 col-lg-5 m-2">
             <div>
-              <h2 className="blinxon">Qui sommes nous ?</h2>
+              <h2 className="blinxon">C'est quoi ? C'est qui ?</h2>
               <p>
-                Notre duo est composé d'Enzo Avagliano et Olivia Masson, deux étudiants Aixois de 19 et 20 ans. Nous nous sommes lancés dans une grande aventure : celle du 4L Trophy. Et nous comptons sur vous pour nous aider à réaliser ce rêve un peu fou !
+                L’association Enfants du Désert existe depuis 2005. Elle a vu le jour suite à un voyage sur les terres marocaines qui a encouragé Laetitia et Emmanuel Chevallier à s’engager pour une cause qui porte un sens : l’accès à l’éducation des enfants du sud marocain.
+                <br/>L’accès à l’éducation est l’objectif principal d’Enfants du Désert, mais, conscient des corrélations entre la santé, les conditions de vie et l’accès à l’école, l’association a élargi ses champs d’actions afin d’opter pour une démarche globale en faveur des enfants.
               </p>
             </div>
+            <div className="aboutEddLogo"></div>
           </div>
 
-          <div className="aboutIndividualContainer d-flex flex-column col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 m-2">
-            <div className="aboutIndividual enzo mt-2 mb-2">
-              <h2 className="blinxon">Enzo Avagliano <span className="statusRally">Pilote</span></h2>
-              <p className="p-0 m-0">
-                Etudiant en 2nd anéne de bachelor informatique à Ynov à Aix-en-Provence, passionné de l'espace et des étoiles, mais aussi fou amoureux de cette course qu'est le 4L Trophy.
+          <div className="aboutEdd mt-2 mb-2 d-flex flex-column col-12 col-xs-12 col-sm-12 col-md-5 col-lg-5 m-2">
+            <div>
+              <h2 className="blinxon">Enfants du désert & 4L Trophy</h2>
+              <p>
+                L'un des objectifs du raid 4L Trophy, est d'apporter des dons de matériel scolaire et sportif pour l'association. Ce sont les généreux dons financiers et matériels des Trophysites qui aident Enfants du désert !
               </p>
             </div>
-            <div className=" aboutIndividual olivia mt-2 mb-2">
-              <h2 className="blinxon">Olivia Masson <span className="statusRally">Co-pilote</span></h2>
-              <p className="p-0 m-0">
-                Etudiante en Droit à la faculté d'Aix-en-Provence, scoute d'exeption et à la recherche d'aventure, passionnée par le 4L Trophy depuis plus d'un an déjà.
-              </p>
+            <div className="statsEdd d-flex flex-column">
+              <h4 className="blinxon">Quelques statistiques :</h4>
+              <div className=" mt-5 d-flex flex-wrap justify-content-around align-items-center">
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">32</h1>
+                  <p>salles de classes</p>
+                </div>
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">240000</h1>
+                  <p>enfants bénéficiaires</p>
+                </div>
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">14</h1>
+                  <p>jardins d'enfants</p>
+                </div>
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">8</h1>
+                  <p>écoles complètes</p>
+                </div>
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">3000</h1>
+                  <p>participants<br/>(en 2020)</p>
+                </div>
+                <div className="statCardEdd d-flex flex-column col-4 mb-4 text-center">
+                  <h1 className="blinxon">20</h1>
+                  <p>tonnes de dons<br/>(en 2020)</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     )
   }

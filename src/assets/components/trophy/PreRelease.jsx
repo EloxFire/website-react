@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-scroll";
 import Countdown from "react-countdown-now";
 import '../../sass/trophy/prerelease.scss';
 
@@ -38,10 +39,9 @@ class PreRelease extends Component{
               <p className="blinxon followText">Suivez notre aventure !</p>
             </div>
             <div className="blinxonButtonContainer col-12 d-flex flex-wrap justify-content-around">
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">L'équipage</button>
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Enfants du désert</button>
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Pourquoi nous aider</button>
-              <button className="blinxon btn blinxonButtonSections mt-2 mb-2">Comment nous aider</button>
+              <Link activeClass="active" to="squad" spy={true} smooth={true} offset={-20} duration={500}><button className="blinxon btn blinxonButtonSections mt-2 mb-2">L'équipage</button></Link>
+              <Link activeClass="active" to="edd" spy={true} smooth={true} offset={-20} duration={500}><button className="blinxon btn blinxonButtonSections mt-2 mb-2">Enfants du désert</button></Link>
+              <Link activeClass="active" to="help" spy={true} smooth={true} offset={-20} duration={500}><button className="blinxon btn blinxonButtonSections mt-2 mb-2">Pourquoi & comment nous aider</button></Link>
             </div>
           </div>
         </div>

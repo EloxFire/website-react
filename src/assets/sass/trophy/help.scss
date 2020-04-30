@@ -1,8 +1,8 @@
 @import "../variables.scss";
 
-#edd{
-  margin-bottom: 15vh;
-  .eddTitle{
+#help{
+  margin-bottom: 7vh;
+  .helpTitle{
     padding: 0;
     margin: 0;
     font-family: 'Osaka Chips' !important;
@@ -15,29 +15,31 @@
     height: 110px;
   }
 
-  .aboutEdd{
+  .aboutHelp{
     border: 4px solid $blinxonRed;
     border-radius: 20px;
   }
-  .aboutEddLogo{
-    height: 30vh !important;
-    background-image: url("../../img/trophy/LOGO-EDD.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+  .redLink{
+    color: $blinxonRed;
+    text-decoration: none !important;
+    transition: .4s;
+
+    &:hover{
+      border-bottom: 4px solid $blinxonRed;
+    }
   }
 
-  .statsEdd{
-    height: 80% !important;
-  }
+}
+.blinxon{
+  font-family: 'Osaka Chips' !important;
 }
 
-
 @media screen and (max-width:992px) {
-  #edd{
+  #help{
     height: auto !important;
     margin-bottom: 7vh;
-    .eddTitle{
+    .helpTitle{
       padding-top: 1.5vh !important;
       font-size: 2.5em !important;
       height: 80px !important;
