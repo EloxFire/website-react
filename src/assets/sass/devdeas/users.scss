@@ -12,20 +12,21 @@
     }
   }
 
-  .actionButton{
-    width: 25vh;
-    height: 25vh;
-    border: 1px solid rgba(#000, 0.2);
-    border-radius: 50px;
-    transition: .3s;
-
-    &:hover{
-      box-shadow: -1px 0 rgba(#000, 0.2), 0 1px rgba(#000, 0.2), 1px 0 rgba(#000, 0.2), 0 -1px rgba(#000, 0.2);
-    }
-  }
-
   .usersMb{
     margin-bottom: 15vh;
+  }
+
+  .formCreateContainer{
+    border: 3px solid $secondaryColor;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .ideaListContainer{
+    margin-bottom: 15vh;
+  }
+  .ideaCard{
+    width: 18rem;
   }
 
 }
