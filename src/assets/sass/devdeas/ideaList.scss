@@ -1,9 +1,9 @@
 @import '../variables.scss';
 @import 'devdeasDescription.scss';
 
-.card{
+.ideaCard{
   width: 18rem !important;
-  height: 40vh !important;
+  height: 40vh;
 }
 
 .ideaContainer{
@@ -15,11 +15,12 @@
 }
 
 .cardTextBody{
-  height: 70%;
+  margin-top: 1vh;
+  height: 20vh;
   overflow: auto;
 }
 
 .cardBadges{
-  max-height: 5vh;
+  max-height: 7vh;
   overflow: auto;
 }

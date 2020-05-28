@@ -94,7 +94,7 @@ class IdeaSumit extends Component{
                 <input onChange={this.handleChangeIdeaName} type="text" className="form-control" id="inputCreateIdeaName" placeholder="Give a name to your idea" required/>
               </div>
               <div className="form-group col-md-6">
-                <label htmlFor="inputCreateIdeaLang">Idea language <small>(If multiple : Separe by comma , )</small></label>
+                <label htmlFor="inputCreateIdeaLang">Idea language <small>(If multiple : Separe by comma ' , ' without spaces)</small></label>
                 <input onChange={this.handleChangeIdeaLang} type="text" className="form-control" id="inputCreateIdeaLang" placeholder="HTML,Javascript,C,C#,Ruby"/>
               </div>
             </div>
@@ -103,7 +103,7 @@ class IdeaSumit extends Component{
               <textarea onChange={this.handleChangeIdeaDesc} className="form-control" type="text" id="inoutCreateIdeaDescription" cols="30" rows="5" placeholder="Describe your idea with the most details you can give"></textarea>
             </div>
             <div className="form-group">
-              <label htmlFor="inputCreateIdeaKeywords">Idea keywords <small>(If multiple : Separe by comma , )</small></label>
+              <label htmlFor="inputCreateIdeaKeywords">Idea keywords <small>(If multiple : Separe by comma ' , ' without spaces)</small></label>
               <input onChange={this.handleChangeIdeaKeyWords} type="text" className="form-control" id="inputCreateIdeaKeywords" placeholder="Hack,Web,Automation"/>
             </div>
 
