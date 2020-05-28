@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
-import Showcase from './devdeas/Showcase.jsx';
-import UsersPage from './devdeas/Users.jsx';
+import DevdeasDescritpion from './devdeas/DevdeasDescritpion.jsx';
+import IdeaSumit from './devdeas/IdeaSumit.jsx';
+import IdeaList from './devdeas/IdeaList.jsx';
 
 class Devdeas extends Component{
   render(){
     return(
       <div id="devdeas">
-        <Showcase/>
-        <UsersPage/>
+        <DevdeasDescritpion/>
+        <IdeaSumit/>
+        <IdeaList/>
       </div>
     )
   }

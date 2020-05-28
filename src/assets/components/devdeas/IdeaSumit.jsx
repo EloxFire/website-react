@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import '../../sass/devdeas/users.scss';
+import '../../sass/devdeas/ideaSubmit.scss';
 
-class Users extends Component{
+class IdeaSumit extends Component{
 
   constructor(props) {
     super(props);
     this.state = {
       dbResponse: "",
-      createIdeaName: "",
-      createIdeaLang: "",
-      createIdeaDesc: "",
-      createIdeaKeyWords: "",
-      fetchedIdea: []
+      ideaName: "",
+      ideaLang: "",
+      ideaDesc: "",
+      ideaKeyWords: "",
     };
 
     this.handleChangeIdeaName = this.handleChangeIdeaName.bind(this);
@@ -54,23 +53,18 @@ class Users extends Component{
   handleSubmit(e){
     e.preventDefault();
 
-    const idea = {
+    let idea = {
       name: this.state.ideaName,
       description: this.state.ideaDesc,
-      lang: this.state.ideaLang
+      lang: this.state.ideaLang,
+      keywords: this.state.ideaKeyWords
     };
+    console.log(idea);
 
     axios.post('http://185.163.126.247:9000/add', idea)
       .then(res => console.log("data sent"))
       .catch(err => console.log(err.data));
-  }
 
-  getIdeas(){
-    fetch("http://185.163.126.247:9000/ideas")
-    .then(res => res.json())
-    .then(res => this.setState({
-      fetchedIdea: res
-    }));
   }
 
   callDB() {
@@ -82,27 +76,26 @@ class Users extends Component{
 
   componentWillMount() {
       this.callDB();
-      this.getIdeas();
   }
 
   render(){
     return(
-      <div id="usersShare" className="pt-5">
-        <h1 className="ml-5 devdeasSectionTitle"><span>&#60;</span><span>&#47;</span>For users<span>&#62;</span></h1>
+      <div id="ideaSubmit" className="container pt-5">
+        <h1 className="ml-5 devdeasTitle"><span>&#60;</span><span>&#47;</span>Submit<span>&#62;</span></h1>
         <p className="ml-5">Here you can upload any new idea. It'll be stored in my database and everyone will be able to see it so, be specific !</p>
 
-        <div className="formCreateContainer container mt-3 mb-5">
+        <div className="formCreateContainer bordered mt-3 mb-5">
           <h5>Submit idea form.</h5>
 
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="form-row">
               <div className="form-group col-md-6">
                 <label htmlFor="inputCreateIdeaName">Idea name</label>
-                <input onChange={this.handleChangeIdeaName} type="text" className="form-control" id="inputCreateIdeaName" placeholder="Give a name to your idea"/>
+                <input onChange={this.handleChangeIdeaName} type="text" className="form-control" id="inputCreateIdeaName" placeholder="Give a name to your idea" required/>
               </div>
               <div className="form-group col-md-6">
-                <label htmlFor="inputCreateIdeaLang">Idea language</label>
-                <input onChange={this.handleChangeIdeaLang} type="text" className="form-control" id="inputCreateIdeaLang" placeholder="What language would you like to see it made"/>
+                <label htmlFor="inputCreateIdeaLang">Idea language <small>(If multiple : Separe by comma , )</small></label>
+                <input onChange={this.handleChangeIdeaLang} type="text" className="form-control" id="inputCreateIdeaLang" placeholder="HTML,Javascript,C,C#,Ruby"/>
               </div>
             </div>
             <div className="form-group">
@@ -110,8 +103,8 @@ class Users extends Component{
               <textarea onChange={this.handleChangeIdeaDesc} className="form-control" type="text" id="inoutCreateIdeaDescription" cols="30" rows="5" placeholder="Describe your idea with the most details you can give"></textarea>
             </div>
             <div className="form-group">
-              <label htmlFor="inputCreateIdeaKeywords">Idea keywords</label>
-              <input onChange={this.handleChangeIdeaKeyWords} type="text" className="form-control" id="inputCreateIdeaKeywords" placeholder="Hack, Web, Automation..."/>
+              <label htmlFor="inputCreateIdeaKeywords">Idea keywords <small>(If multiple : Separe by comma , )</small></label>
+              <input onChange={this.handleChangeIdeaKeyWords} type="text" className="form-control" id="inputCreateIdeaKeywords" placeholder="Hack,Web,Automation"/>
             </div>
 
             <div className="d-flex flex-column">
@@ -120,30 +113,9 @@ class Users extends Component{
             </div>
           </form>
         </div>
-
-        <h1 className="ml-5 devdeasSectionTitle"><span>&#60;</span><span>&#47;</span>For developpers<span>&#62;</span></h1>
-        <p className="ml-5">Here you can start developping an idea, share your progress and get help !</p>
-
-        <div className="ideaListContainer">
-          <div className="container d-flex flex-wrap">
-            {this.state.fetchedIdea.map(function(item, index){
-              return(
-                <div className="card m-2 ideaCard">
-                  <div className="card-header text-center">
-                    {item.name}
-                  </div>
-                  <ul className="list-group list-group-flush">
-                    <li className="list-group-item text-center">{item.description}</li>
-                    <li className="list-group-item text-center">{item.lang}</li>
-                  </ul>
-                </div>
-              )
-            })}
-          </div>
-        </div>
       </div>
     )
   }
 }
 
-export default Users;
+export default IdeaSumit;

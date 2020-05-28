@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+#devdeasDescription{
+  margin-bottom: 7vh;
+  .devdeasMainTitle{
+    padding: 0;
+    margin: 0;
+    color: $secondaryColor;
+    font-size: 4em;
+
+    span{
+      color: black;
+    }
+    .beta{
+      font-size: 25%;
+    }
+  }
+
+  .devdeasMainSubtitle{
+    color: $secondaryColor;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+.devdeasTitle{
+  padding: 0;
+  margin: 0;
+  color: $secondaryColor;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  span{
+    color: black;
+  }
+}
+
+.bordered{
+  border: 3px solid $secondaryColor;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+.rulesImportant{
+  color: $red;
+}
+
+@media screen and(max-width:992px) {
+  .devdeasMainTitle{
+    font-size: 3em !important;
+  }
+}

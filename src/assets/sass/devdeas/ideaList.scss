@@ -1,0 +1,25 @@
+@import '../variables.scss';
+@import 'devdeasDescription.scss';
+
+.card{
+  width: 18rem !important;
+  height: 40vh !important;
+}
+
+.ideaContainer{
+  overflow-x: scroll;
+}
+
+.badge-primary{
+  background-color: $secondaryColor !important;
+}
+
+.cardTextBody{
+  height: 70%;
+  overflow: auto;
+}
+
+.cardBadges{
+  max-height: 5vh;
+  overflow: auto;
+}
