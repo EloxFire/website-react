@@ -34,6 +34,11 @@
   }
 }
 
+.warning{
+  color: $red !important;
+  text-decoration: underline;
+}
+
 .bordered{
   border: 3px solid $secondaryColor;
   border-radius: 20px;

@@ -35,7 +35,7 @@ class IdeaList extends Component {
           <div className="ideaContainer d-flex flex-column flex-xs-column flex-sm-column flex-md-row flex-lg-row">
             {this.state.fetchedIdea.map(function(item, index){
               return(
-                <div key={index} className="card col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 m-2">
+                <div key={index} className="card col-11 col-xs-11 col-sm-11 col-md-3 col-lg-3 m-2">
                   <div className="card-body">
                     <h5 className="card-title">{item.name}</h5>
                     <div className="cardBadges d-flex flex-wrap">
