@@ -13,7 +13,7 @@ class IdeaList extends Component {
   }
 
   getIdeas(){
-    fetch("http://185.163.126.247:9000/ideas")
+    fetch("http://185.163.126.247:8080/ideas")
     .then(res => res.json())
     .then(res => this.setState({
       fetchedIdea: res
@@ -37,12 +37,14 @@ class IdeaList extends Component {
               return(
                 <div key={index} className="card col-11 col-xs-11 col-sm-11 col-md-3 col-lg-3 m-2">
                   <div className="card-body">
-                    <h5 className="card-title">{item.name}</h5>
+                    <h5 className="card-title mb-n1">{item.name}</h5>
+                    <span className="badge badge-primary mr-1 mt-1">Submited by : {item.author}</span>
+                    <hr/>
                     <div className="cardBadges d-flex flex-wrap">
-                      {item.lang == null &&
+                      {item.lang === null &&
                         <span className="badge badge-primary mr-1 mt-1 mb-1">No language</span>
                       }
-                      {item.lang == "" &&
+                      {item.lang === "" &&
                         <span className="badge badge-primary mr-1 mt-1 mb-1">No language</span>
                       }
                       {
@@ -54,21 +56,21 @@ class IdeaList extends Component {
                       }
                     </div>
                     <div className="cardTextBody">
-                      {item.description == null &&
+                      {item.description === null &&
                         <p className="card-text">No description.</p>
                       }
-                      {item.description == "" &&
+                      {item.description === "" &&
                         <p className="card-text">No description.</p>
                       }
                       <p className="card-text">{item.description}</p>
                     </div>
                     <div className="keywordsContainer mt-3">
                       {
-                        item.keywords == "" &&
+                        item.keywords === "" &&
                         <span className="badge badge-primary mr-1 mt-1 mb-1">No keywords</span>
                       }
                       {
-                        item.keywords == null &&
+                        item.keywords === null &&
                         <span className="badge badge-primary mr-1 mt-1 mb-1">No keywords</span>
                       }
                       {

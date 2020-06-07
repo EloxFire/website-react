@@ -12,12 +12,14 @@ class IdeaSumit extends Component{
       ideaLang: "",
       ideaDesc: "",
       ideaKeyWords: "",
+      ideaAuthor: "",
     };
 
     this.handleChangeIdeaName = this.handleChangeIdeaName.bind(this);
     this.handleChangeIdeaLang = this.handleChangeIdeaLang.bind(this);
     this.handleChangeIdeaDesc = this.handleChangeIdeaDesc.bind(this);
     this.handleChangeIdeaKeyWords = this.handleChangeIdeaKeyWords.bind(this);
+    this.handleChangeIdeaAuthor = this.handleChangeIdeaAuthor.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -50,10 +52,18 @@ class IdeaSumit extends Component{
     console.log('onChange keywords : ', this.state.ideaKeyWords);
   }
 
+  handleChangeIdeaAuthor(e) {
+    this.setState({
+        ideaAuthor: e.target.value
+    });
+    console.log('onChange author : ', this.state.ideaAuthor);
+  }
+
   handleSubmit(e){
     e.preventDefault();
 
     let idea = {
+      author: this.state.ideaAuthor,
       name: this.state.ideaName,
       description: this.state.ideaDesc,
       lang: this.state.ideaLang,
@@ -61,14 +71,16 @@ class IdeaSumit extends Component{
     };
     console.log(idea);
 
-    axios.post('http://185.163.126.247:9000/add', idea)
+    axios.post('http://185.163.126.247:8080/add', idea)
       .then(res => console.log("data sent"))
       .catch(err => console.log(err.data));
+
+    
 
   }
 
   callDB() {
-    fetch("http://185.163.126.247:9000/database")
+    fetch("http://185.163.126.247:8080/db")
     .then(res => res.text())
     .then(res => this.setState({ dbResponse: res }));
     console.log(this.state.dbResponse);
@@ -89,8 +101,14 @@ class IdeaSumit extends Component{
 
           <form onSubmit={this.handleSubmit}>
             <div className="form-row">
+              <div className="form-group col-md-12">
+                <label htmlFor="inputCreateIdeaAuthor">Author <small>(Anonymous if null)</small></label>
+                <input onChange={this.handleChangeIdeaAuthor} type="text" className="form-control" id="inputCreateIdeaAuthor" placeholder="What's your name ?"/>
+              </div>
+            </div>
+            <div className="form-row">
               <div className="form-group col-md-6">
-                <label htmlFor="inputCreateIdeaName">Idea name</label>
+                <label htmlFor="inputCreateIdeaName">Idea name <small>(Required)</small></label>
                 <input onChange={this.handleChangeIdeaName} type="text" className="form-control" id="inputCreateIdeaName" placeholder="Give a name to your idea" required/>
               </div>
               <div className="form-group col-md-6">
@@ -107,10 +125,12 @@ class IdeaSumit extends Component{
               <input onChange={this.handleChangeIdeaKeyWords} type="text" className="form-control" id="inputCreateIdeaKeywords" placeholder="Hack,Web,Automation"/>
             </div>
 
-            <div className="d-flex flex-column">
-              <button type="submit" className="btn btn-success">Submit you idea !</button>
-              <small>Database connexion : {this.state.dbResponse}</small>
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <button type="submit" className="btn btn-success col-12">Submit you idea !</button>
+              <small>Don't forget to refresh the page after submitting</small>
+              <small>The form doesn't refresh it for you ;)</small>
             </div>
+            <small>Database connection : {this.state.dbResponse}</small>
           </form>
         </div>
       </div>

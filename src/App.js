@@ -19,6 +19,9 @@ import Blinxon from './assets/components/trophy/Blinxon.jsx';
 import BlinxonNav from './assets/components/trophy/BlinxonNav.jsx';
 import BlinxonFooter from './assets/components/trophy/BlinxonFooter.jsx';
 
+// Admin components
+import LoginPage from './assets/components/admin/LoginPage.jsx';
+
 // Coming soon page
 import ComingSoon from './assets/components/ComingSoon.jsx';
 
@@ -31,7 +34,7 @@ class App extends Component{
     return (
       <Router>
         <div>
-          <Route path="/(home|work|devdeas|blog|contact|arch)/" component={props =>
+          <Route path="/(home|work|devdeas|blog|contact|arch|admin)/" component={props =>
             <div>
               <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
             </div>
@@ -86,6 +89,12 @@ class App extends Component{
             <Route path="/devdeas" component={props =>
               <div>
                 <Devdeas/>
+              </div>
+            }/>
+
+            <Route path="/admin" component={props =>
+              <div>
+                <LoginPage/>
               </div>
             }/>
 
