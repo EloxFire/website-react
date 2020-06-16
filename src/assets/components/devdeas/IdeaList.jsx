@@ -13,7 +13,7 @@ class IdeaList extends Component {
   }
 
   getIdeas(){
-    fetch("http://185.163.126.247:8080/ideas")
+    fetch("https://projects-enzoavagliano.fr:9000/ideas")
     .then(res => res.json())
     .then(res => this.setState({
       fetchedIdea: res

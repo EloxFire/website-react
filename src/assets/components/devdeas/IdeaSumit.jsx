@@ -71,16 +71,13 @@ class IdeaSumit extends Component{
     };
     console.log(idea);
 
-    axios.post('http://185.163.126.247:8080/add', idea)
+    axios.post('https://projects-enzoavagliano.fr:9000/add', idea)
       .then(res => console.log("data sent"))
       .catch(err => console.log(err.data));
-
-    
-
   }
 
   callDB() {
-    fetch("http://185.163.126.247:8080/db")
+    fetch("https://projects-enzoavagliano.fr:9000/db")
     .then(res => res.text())
     .then(res => this.setState({ dbResponse: res }));
     console.log(this.state.dbResponse);
