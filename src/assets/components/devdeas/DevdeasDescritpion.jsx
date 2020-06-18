@@ -29,7 +29,7 @@ class DevdeasDescritpion extends Component{
             </ul>
           </div>
 
-          <h6 className="warning">WARNING : During the beta, https is not available, please go to <a href="http://enzoavagliano.fr/devdeas">this link</a> to submit your ideas.</h6>
+          {/*<h6 className="warning">WARNING : During the beta, https is not available, please go to <a href="http://enzoavagliano.fr/devdeas">this link</a> to submit your ideas.</h6>*/}
         </div>
 
       </div>

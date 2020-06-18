@@ -63,8 +63,8 @@ class IdeaSumit extends Component{
     e.preventDefault();
 
     let idea = {
-      author: this.state.ideaAuthor,
       name: this.state.ideaName,
+      author: this.state.ideaAuthor,
       description: this.state.ideaDesc,
       lang: this.state.ideaLang,
       keywords: this.state.ideaKeyWords
