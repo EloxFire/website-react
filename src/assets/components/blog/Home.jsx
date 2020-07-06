@@ -6,17 +6,14 @@ import '../../sass/blog/blog.scss';
 // import resume from '../../img/cv.pdf';
 
 class Home extends Component{
-  componentDidMount(){
+  componentWillMount(){
     document.title = "Enzo Avagliano - Blog";
   }
 
   render(){
     return(
-      <div id="trophyHeader">
-        <div className="d-flex flex-column justify-content-center align-items-center title-container p-5">
-          <h6>Coming soon . . .</h6>
-          <h1>PAGE UNDER DEVELOPMENT</h1>
-        </div>
+      <div id="">
+        test
       </div>
     )
   }

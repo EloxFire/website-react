@@ -10,7 +10,7 @@ class Work extends Component{
     super(props);
     this.state = {
       repositories : [],
-      user: []
+      user: [],
     };
   }
 
@@ -26,6 +26,7 @@ class Work extends Component{
         user: data2
     }));
   }
+
 
   render(){
     const user = this.state.user;

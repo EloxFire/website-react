@@ -10,14 +10,13 @@ import Me from './assets/components/Me.jsx';
 // Website pages
 import Work from './assets/components/Work.jsx';
 import Contact from './assets/components/Contact.jsx';
-// import Home from './assets/components/blog/Home.jsx';
 import Footer from './assets/components/Footer.jsx';
-import Devdeas from './assets/components/Devdeas.jsx';
 
-// Blinxon component
-import Blinxon from './assets/components/trophy/Blinxon.jsx';
-import BlinxonNav from './assets/components/trophy/BlinxonNav.jsx';
-import BlinxonFooter from './assets/components/trophy/BlinxonFooter.jsx';
+// Blog pages
+import Home from './assets/components/blog/Home.jsx';
+
+// Devdeas
+import Devdeas from './assets/components/Devdeas.jsx';
 
 // Admin components
 import LoginPage from './assets/components/admin/LoginPage.jsx';
@@ -33,84 +32,80 @@ class App extends Component{
   render(){
     return (
       <Router>
+      <div>
+      <Route path="/(home|work|devdeas|blog|contact|arch|admin)/" component={props =>
         <div>
-          <Route path="/(home|work|devdeas|blog|contact|arch|admin)/" component={props =>
-            <div>
-              <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
-            </div>
-          }/>
-          <Switch>
-
-            <Route path="/" exact component={props =>
-              <div>
-                <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
-                <HeaderContent quote={["Student | Junior Web Developper"]}/>
-                <TechContent/>
-                <Me/>
-                <Footer/>
-              </div>
-            }/>
-
-            <Route path="/home" component={props =>
-              <div>
-                <HeaderContent quote={["Student | Junior Web Developper"]}/>
-                <TechContent/>
-                <Me/>
-              </div>
-            }/>
-
-            <Route path="/work" component={props =>
-              <div>
-                <Work/>
-              </div>
-            }/>
-
-            <Route path="/blog" component={props =>
-              <div>
-                <ComingSoon/>
-              </div>
-            }/>
-
-            <Route path="/contact" component={props =>
-              <div>
-                <Contact/>
-              </div>
-            }/>
-
-            <Route path="/blinxon" component={props =>
-              <div>
-                <BlinxonNav/>
-                <Blinxon/>
-                <BlinxonFooter/>
-                {/*<ComingSoon/>*/}
-              </div>
-            }/>
-
-            <Route path="/devdeas" component={props =>
-              <div>
-                <Devdeas/>
-              </div>
-            }/>
-
-            <Route path="/admin" component={props =>
-              <div>
-                <LoginPage/>
-              </div>
-            }/>
-
-            <Route path="/arch" component={props =>
-              <div>
-                {/*<Arch/>*/}
-                <ComingSoon/>
-              </div>
-            }/>
-          </Switch>
-          <Route path="/(home|work|devdeas|blog|contact|arch)/" component={props =>
-            <div>
-              <Footer/>
-            </div>
-          }/>
+        <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
         </div>
+      }/>
+      <Switch>
+
+      <Route path="/" exact component={props =>
+        <div>
+        <Navbar leftTitles={["Home", "Work", "Blog", "Blinxon"]} rightTitles={["Devdeas", "Contact"]}/>
+        <HeaderContent quote={["Student | Junior Web Developper"]}/>
+        <TechContent/>
+        <Me/>
+        <Footer/>
+        </div>
+      }/>
+
+      <Route path="/home" component={props =>
+        <div>
+        <HeaderContent quote={["Student | Junior Web Developper"]}/>
+        <TechContent/>
+        <Me/>
+        </div>
+      }/>
+
+      <Route path="/work" component={props =>
+        <div>
+        <Work/>
+        </div>
+      }/>
+
+      <Route path="/blog" component={props =>
+        <div>
+        <ComingSoon/>
+        </div>
+      }/>
+
+      <Route path="/contact" component={props =>
+        <div>
+        <Contact/>
+        </div>
+      }/>
+
+      <Route path='/blinxon' component={() => {
+        window.location.href = 'https://blinxon.enzoavagliano.fr';
+        return null;
+      }}/>
+
+      <Route path="/devdeas" component={props =>
+        <div>
+        <Devdeas/>
+        </div>
+      }/>
+
+      <Route path="/admin" component={props =>
+        <div>
+        <LoginPage/>
+        </div>
+      }/>
+
+      <Route path="/arch" component={props =>
+        <div>
+        {/*<Arch/>*/}
+        <ComingSoon/>
+        </div>
+      }/>
+      </Switch>
+      <Route path="/(home|work|devdeas|blog|contact|arch)/" component={props =>
+        <div>
+        <Footer/>
+        </div>
+      }/>
+      </div>
       </Router>
     )
   }
