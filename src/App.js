@@ -12,9 +12,6 @@ import Work from './assets/components/Work.jsx';
 import Contact from './assets/components/Contact.jsx';
 import Footer from './assets/components/Footer.jsx';
 
-// Blog pages
-import Home from './assets/components/blog/Home.jsx';
-
 // Devdeas
 import Devdeas from './assets/components/Devdeas.jsx';
 
@@ -64,11 +61,10 @@ class App extends Component{
         </div>
       }/>
 
-      <Route path="/blog" component={props =>
-        <div>
-        <ComingSoon/>
-        </div>
-      }/>
+      <Route path='/blog' component={() => {
+        window.location.href = 'https://blog.enzoavagliano.fr';
+        return null;
+      }}/>
 
       <Route path="/contact" component={props =>
         <div>
