@@ -12,9 +12,6 @@ import Work from './assets/components/Work.jsx';
 import Contact from './assets/components/Contact.jsx';
 import Footer from './assets/components/Footer.jsx';
 
-// Devdeas
-import Devdeas from './assets/components/Devdeas.jsx';
-
 // Admin components
 import LoginPage from './assets/components/admin/LoginPage.jsx';
 
@@ -78,9 +75,8 @@ class App extends Component{
       }}/>
 
       <Route path="/devdeas" component={props =>
-        <div>
-        <Devdeas/>
-        </div>
+        window.location.href = 'https://devdeas.enzoavagliano.fr';
+        return null;
       }/>
 
       <Route path="/admin" component={props =>
