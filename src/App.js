@@ -14,7 +14,7 @@ class App extends Component{
       <div id="website">
         <Router>
 
-          <Navbar titles={["About", "My work", "Blog", "Devdeas", "Blinxon"]}/>
+          <Navbar titles={["About", "My work", "Blog", "Devdeas", "Blinxon", "Contact"]}/>
           <Switch>
             <Route path="/" exact component={props =>
               <div>
@@ -30,6 +30,21 @@ class App extends Component{
 
             <Route path='/about' component={() => {
               window.location.href = '/home';
+              return null;
+            }}/>
+
+            <Route path='/devdeas' component={() => {
+              window.location.href = 'https://devdeas.enzoavagliano.fr';
+              return null;
+            }}/>
+
+            <Route path='/blog' component={() => {
+              window.location.href = 'https://blog.enzoavagliano.fr';
+              return null;
+            }}/>
+
+            <Route path='/blinxon' component={() => {
+              window.location.href = 'https://blinxon.enzoavagliano.fr';
               return null;
             }}/>
           </Switch>

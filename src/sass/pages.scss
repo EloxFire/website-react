@@ -1,0 +1,41 @@
+@import "main.scss";
+
+.landing{
+  background-color: $violet;
+  background-image: url("../img/stars.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 93vh;
+
+  h1,span{
+    color: $white;
+  }
+
+  .landing-logo{
+    width: 150px;
+  }
+}
+
+.infosAbout{
+  height: 90vh;
+}
+
+@media screen and (max-width:992px) {
+  .landing{
+    height: 88vh !important;
+    .landing-logo{
+      width: 90px !important;
+    }
+  }
+
+  h1{
+    font-size: 180% !important;
+  }
+  h2{
+    font-size: 170% !important;
+  }
+  h3{
+    font-size: 160% !important;
+  }
+}

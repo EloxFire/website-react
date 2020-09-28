@@ -17,9 +17,9 @@
 
   .nav-link{
     color: $white;
-    font-family: "Osaka Chips";
     font-size: 1.3em;
     transition: .3s;
+    font-weight: 400;
 
     &::after{
       content: '';
