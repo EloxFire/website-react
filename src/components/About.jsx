@@ -5,6 +5,11 @@ import logo from '../img/logos/ea.svg';
 import '../sass/pages.scss';
 
 class About extends Component{
+
+  componentDidMount(){
+    document.title = "Enzo Avagliano - Home";
+  }
+  
   render(){
     return(
       <div id="about" className="">

@@ -21,6 +21,24 @@
   height: 90vh;
 }
 
+#login{
+  background-color: $black;
+  height: 93vh;
+
+  input, textarea{
+    background-color: rgba($white, 0.1) !important;
+    border: none !important;
+    outline: none !important;
+
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+  [placeholder]{
+    color: $violet !important;
+  }
+}
+
 @media screen and (max-width:992px) {
   .landing{
     height: 88vh !important;

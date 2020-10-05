@@ -4,11 +4,9 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
 
-class App extends Component{
-  componentDidMount(){
-    document.title = "Enzo Avagliano - Home";
-  }
+import Login from './components/Login';
 
+class App extends Component{
   render(){
     return (
       <div id="website">
@@ -47,6 +45,12 @@ class App extends Component{
               window.location.href = 'https://blinxon.enzoavagliano.fr';
               return null;
             }}/>
+
+            <Route path="/login" component={props =>
+              <div>
+                <Login/>
+              </div>
+            }/>
           </Switch>
         </Router>
       </div>
