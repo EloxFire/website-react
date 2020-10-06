@@ -6,7 +6,7 @@ interface TitleProps{
 }
 
 const Title:React.FC<TitleProps> = ({title}) => (
-  <div className="col-12">
+  <div className="w-100">
     <div style={{backgroundColor:"#9146FF",height:"3px",borderRadius:"3px",width:"80%"}}></div>
     <h1>{title}</h1>
   </div>
