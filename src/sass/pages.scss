@@ -33,7 +33,16 @@
 
 #login{
   background-color: $black;
-  height: 93vh;
+  height: 90vh;
+
+  .border{
+    border: 2px solid $violet !important;
+    border-radius: 8px;
+  }
+
+  label, h2{
+    color: $white !important;
+  }
 
   input, textarea{
     background-color: rgba($white, 0.1) !important;

@@ -16,11 +16,13 @@ if (empty($_POST['username']) && empty($_POST['usermail'])){
   $msg = "<p style='margin-top:20px;'>". $_POST['usermessage'] ."</p>";
   $headers = "MIME-Version: 1.0\r\n";
 	$headers.= "Content-type: text/html; charset=UTF-8\r\n";
+  // Starting message styling
   $headers.= "<h1>Nouveau message depuis <pre>enzoavagliano.fr</pre> !</h1>";
   $headers.= "<h4 style='margin:0;'>Email : " . $from . "</h4>";
   $headers.= "<h4 style='margin:0;'>Autheur : " . $_POST['username'] . "</h4>";
   $headers.= "<h4 style='margin:0;'>Objet : " . $subject . "</h4>";
   $headers.= "<br/>";
+  
   mail($to, $subject, $msg, $headers);
   echojson_encode(array(
     "sent" => true
