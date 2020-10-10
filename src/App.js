@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Footer from './components/Footer';
+import Work from './components/Work';
 
 import Login from './components/Login';
 
@@ -46,6 +47,12 @@ class App extends Component{
               window.location.href = 'https://blinxon.enzoavagliano.fr';
               return null;
             }}/>
+
+            <Route path="/mywork" component={props =>
+              <div>
+                <Work/>
+              </div>
+            }/>
 
             <Route path="/login" component={props =>
               <div>
