@@ -9,7 +9,7 @@
   height: 93vh;
 
   h1,span{
-    color: $white;
+    color: $white !important;
   }
 
   .landing-logo{
@@ -24,6 +24,18 @@
 .bg-purple{
   background-color: $violet !important;
 }
+.nav-pills > .active > a, .nav-pills > .active{
+  background-color: $violet !important;
+}
+
+.nav-pills > h4{
+  color: $white;
+  // border-bottom: 1px solid $violet;
+}
+
+.nav-pills > a,{
+  color: $white;
+}
 
 #footer{
   height: 3vh;
@@ -33,7 +45,7 @@
 
 #login{
   background-color: $black;
-  height: 90vh;
+  height: $height !important;
 
   .border{
     border: 2px solid $violet !important;
@@ -55,6 +67,16 @@
   }
   [placeholder]{
     color: $violet !important;
+  }
+}
+
+#dashboard{
+  height: $height !important;
+  background-color: $black;
+  color: $white !important;
+
+  div, h2{
+    color: $white !important;
   }
 }
 

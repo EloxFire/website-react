@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Work from './components/Work';
 
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
 class App extends Component{
   render(){
@@ -57,6 +58,12 @@ class App extends Component{
             <Route path="/login" component={props =>
               <div>
                 <Login/>
+              </div>
+            }/>
+
+            <Route path="/admin/dash" component={props =>
+              <div>
+                <Dashboard/>
               </div>
             }/>
           </Switch>

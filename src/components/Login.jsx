@@ -40,7 +40,7 @@ class Login extends Component{
     let infoDOM = document.getElementById('test');
 
     if(user.name == this.state.response[0].name && user.pass == this.state.response[0].pass){
-      window.location.href = '/dash';
+      window.location.href = '/admin/dash';
     }else{
       console.log("ERROR bad credentials");
       setTimeout(

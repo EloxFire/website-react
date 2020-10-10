@@ -11,7 +11,7 @@ const Navbar:React.FC<NavbarProps> = ({titles}) => (
       <span className="navbar-toggler-icon"></span>
     </button>
     <a className="navbar-brand" href="/home">
-      <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="Enzo Avagliano's logo"/>
+      <img src={logo} width="35" height="35" className="d-inline-block align-top" alt="Enzo Avagliano's logo"/>
     </a>
 
     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
