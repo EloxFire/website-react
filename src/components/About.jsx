@@ -30,7 +30,7 @@ class About extends Component{
         <div className="infosAbout col-12 d-flex flex-column flex-lg-row">
           <div className="col-12 col-lg-6 p-3 d-flex flex-column align-items-center justify-content-center">
             <div className="d-flex flex-column flex-lg-row">
-              <div className="col-12 col-lg-6 d-flex flex-row justify-content-center mb-5 mb-lg-0"><img style={{width:"80%",border:"5px solid #9146FF",borderRadius:'50%'}} src={pp} alt="Enzo Avagliano's profile picture"/></div>
+              <div className="col-12 col-lg-6 d-flex flex-row justify-content-center mb-5 mb-lg-0"><img style={{width:"80%",border:"5px solid #9146FF",borderRadius:'50%'}} src={pp} alt="Enzo Avagliano's pp"/></div>
               <div className="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
                 <div className="w-100 d-flex flex-row justify-content-center justify-content-lg-start">
                   <h3>Enzo Avagliano</h3>

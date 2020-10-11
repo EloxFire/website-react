@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import * as Icon from 'react-bootstrap-icons';
 import '../sass/pages.scss';
 
 class Work extends Component{

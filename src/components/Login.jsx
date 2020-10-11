@@ -37,17 +37,15 @@ class Login extends Component{
       name: this.state.UserName,
       pass: this.state.UserPass,
     };
-    let infoDOM = document.getElementById('test');
 
-    if(user.name == this.state.response[0].name && user.pass == this.state.response[0].pass){
+    if(user.name === this.state.response[0].name && user.pass === this.state.response[0].pass){
       window.location.href = '/admin/dash';
     }else{
       console.log("ERROR bad credentials");
       setTimeout(
         function() {
           window.location.reload(false);
-        }
-        .bind(this),
+        },
         500
       );
     }
