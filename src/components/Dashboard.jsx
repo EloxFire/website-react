@@ -9,13 +9,26 @@ class Dashboard extends Component{
       ideas: [],
       nonCertifiedIdeas: [],
       certifiedIdeas: [],
+      skills: [],
       ideaSelectionFieldCertification: "",
       ideaSelectionFieldDecertification: "",
+      addSkillName: "",
+      addSkillPercentage: "",
+      addSkillLevel: "",
+      addSkillLogo: "",
     }
 
-    this.handleChangeIdeaSelectionCertification = this.handleChangeIdeaSelectionCertification.bind(this);
-    this.handleChangeIdeaSelectionDecertification = this.handleChangeIdeaSelectionDecertification.bind(this);
-    this.handleSubmitIdeaCertification = this.handleSubmitIdeaCertification.bind(this);
+
+    this.handleChangeIdeaSelectionCertification = this.handleChangeIdeaSelectionCertification.bind(this);// Idea Certification field
+    this.handleChangeIdeaSelectionDecertification = this.handleChangeIdeaSelectionDecertification.bind(this);// Idea decertification field
+    this.handleChangeAddSkillName = this.handleChangeAddSkillName.bind(this) //Add skill name
+    this.handleChangeAddSkillPercentage = this.handleChangeAddSkillPercentage.bind(this) //Add skill name
+    this.handleChangeAddSkillLevel = this.handleChangeAddSkillLevel.bind(this) //Add skill name
+    this.handleChangeAddSkillLogo = this.handleChangeAddSkillLogo.bind(this) //Add skill name
+
+    this.handleSubmitIdeaCertification = this.handleSubmitIdeaCertification.bind(this);// Idea Certification submit
+    this.handleSubmitIdeaDecertification = this.handleSubmitIdeaDecertification.bind(this);// Idea decertification submit
+    this.handleSubmitAddSkill = this.handleSubmitAddSkill.bind(this);// Add Skill submit
   }
 
   getDevdeasIdeas(){
@@ -23,6 +36,14 @@ class Dashboard extends Component{
     .then(res => res.json())
     .then(res => this.setState({
       ideas: res
+    }));
+  }
+
+  getSkills(){
+    fetch("https://projects-enzoavagliano.fr:9000/getskills")
+    .then(res => res.json())
+    .then(res => this.setState({
+      skills: res
     }));
   }
 
@@ -46,14 +67,6 @@ class Dashboard extends Component{
     this.setState({
       ideaSelectionFieldCertification: e.target.value
     });
-    console.log("Changed field :", this.state.ideaSelectionFieldCertification);
-  }
-
-  handleChangeIdeaSelectionDecertification(e){
-    this.setState({
-      ideaSelectionFieldDecertification: e.target.value
-    });
-    console.log("Changed field :", this.state.ideaSelectionFieldDecertification);
   }
 
   handleSubmitIdeaCertification(e){
@@ -67,7 +80,6 @@ class Dashboard extends Component{
       .then(res => console.log("data sent"))
       .catch(err => console.log(err.data));
 
-
     setTimeout(
       function() {
         window.location.reload(false);
@@ -77,14 +89,20 @@ class Dashboard extends Component{
     );
   }
 
+  handleChangeIdeaSelectionDecertification(e){
+    this.setState({
+      ideaSelectionFieldDecertification: e.target.value
+    });
+  }
+
   handleSubmitIdeaDecertification(e){
     e.preventDefault();
 
-    let ic = {
+    let idc = {
       name: this.state.ideaSelectionFieldDecertification,
     }
 
-    axios.post('https://projects-enzoavagliano.fr:9000/decertifyideas', ic)
+    axios.post('https://projects-enzoavagliano.fr:9000/decertifyideas', idc)
       .then(res => console.log("data sent"))
       .catch(err => console.log(err.data));
 
@@ -98,10 +116,57 @@ class Dashboard extends Component{
     );
   }
 
+
+  handleChangeAddSkillName(e){
+    this.setState({
+      addSkillName: e.target.value
+    });
+  }
+  handleChangeAddSkillPercentage(e){
+    this.setState({
+      addSkillPercentage: e.target.value
+    });
+  }
+  handleChangeAddSkillLevel(e){
+    this.setState({
+      addSkillLevel: e.target.value
+    });
+  }
+  handleChangeAddSkillLogo(e){
+    this.setState({
+      addSkillLogo: e.target.value
+    });
+  }
+  handleSubmitAddSkill(e){
+    e.preventDefault();
+
+    let newSkill = {
+      name: this.state.addSkillName,
+      percentage: this.state.addSkillPercentage,
+      level: this.state.addSkillLevel,
+      logo: this.state.addSkillLogo
+    }
+
+    axios.post('https://projects-enzoavagliano.fr:9000/addskill', newSkill)
+    .catch(err => console.log(err));
+
+    setTimeout(
+      function() {
+        window.location.reload(false);
+      }
+      .bind(this),
+      500
+    );
+  }
+
+
+
+
   componentDidMount(){
     this.getDevdeasIdeas();
     this.getDevdeasNonCertifiedIdeas();
     this.getDevdeasCertifiedIdeas();
+    this.getSkills();
   }
 
   render(){
@@ -128,9 +193,57 @@ class Dashboard extends Component{
         <div className="tab-content p-4 col-12 col-lg-9" id="v-pills-tabContent">
           <div className="tab-pane fade show active" id="v-pills-addskills" role="tabpanel" aria-labelledby="v-pills-addskills-tab">
             <h2>Add new skill :</h2>
+            <div className="mt-5">
+              <form onSubmit={this.handleSubmitAddSkill}>
+                <div class="form-group">
+                  <label for="imputAddSkillName">Skill name</label>
+                  <input onChange={this.handleChangeAddSkillName} type="text" class="form-control" id="imputAddSkillName" placeholder="Skill name"/>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddSkillPercentage">Skill percentage</label>
+                  <input onChange={this.handleChangeAddSkillPercentage} type="number" class="form-control" id="inputAddSkillPercentage" placeholder="Skill percentage (Min 0 to Max 100)" max="100"/>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddSkillLevel">Skill level</label>
+                  <select onChange={this.handleChangeAddSkillLevel} id="inputAddSkillLevel" className="form-control form-control-sm">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddSkillLogoPath">Skill logo path</label>
+                  <input onChange={this.handleChangeAddSkillLogo} type="text" class="form-control" id="inputAddSkillLogoPath" placeholder="Skill logo path"/>
+                </div>
+                <button type="submit" className="btn btn-primary mb-2 bg-purple">Add new skill</button>
+              </form>
+            </div>
+            <div className="mt-3">
+              <div className="ideasPanel col-12 col-lg-12 pt-3">
+                <h4 className="white">Skill list :</h4>
+                {
+                  this.state.skills.map(function(item, index){
+                    return(
+                      <li className="white mt-3" style={{listStyleType: "none",textTransform:"uppercase",fontWeight:"bold"}} key={index}>
+                        {item.name} <small className="white">{item.percentage}% / {item.level}</small>
+                      </li>
+                    )
+                  })
+                }
+              </div>
+            </div>
           </div>
           <div className="tab-pane fade" id="v-pills-removeskills" role="tabpanel" aria-labelledby="v-pills-removeskills-tab">
             <h2>Remove skill :</h2>
+            <div className="mt-5">
+              <form onSubmit={this.handleSubmitRemoveSkill}>
+                <div class="form-group">
+                  <label for="imputAddSkillName">Skill name</label>
+                  <input onChange={this.handleChangeRemoveSkillName} type="text" class="form-control" id="imputAddSkillName" placeholder="Skill name"/>
+                </div>
+                <button type="submit" className="btn btn-primary mb-2 bg-purple">Add new skill</button>
+              </form>
+            </div>
           </div>
           <div className="tab-pane fade" id="v-pills-updateskills" role="tabpanel" aria-labelledby="v-pills-updateskills-tab">
             <h2>Update skill :</h2>
@@ -171,10 +284,10 @@ class Dashboard extends Component{
           <div className="tab-pane fade" id="v-pills-decertifyideas" role="tabpanel" aria-labelledby="v-pills-decertifyideas-tab">
             <h2>Decertify an idea :</h2>
             <div className="mt-5">
-              <form className="form-inline">
+              <form onSubmit={this.handleSubmitIdeaDecertification} className="form-inline">
                 <div className="form-group mx-sm-3 mb-2">
-                  <label className="white" htmlFor="selectIdeaToCertify">Idea to certify :</label>
-                  <select id="selectIdeaToCertify" className="form-control form-control-sm">
+                  <label className="white" htmlFor="selectIdeaToDecertify">Idea to certify :</label>
+                  <select onChange={this.handleChangeIdeaSelectionDecertification} id="selectIdeaToDecertify" className="form-control form-control-sm">
                     {
                       this.state.certifiedIdeas.map(function(item, index){
                         return(
