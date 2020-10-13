@@ -15,7 +15,7 @@ class App extends Component{
       <div id="website">
         <Router>
 
-          <Navbar titles={["About", "My work", "Blog", "Devdeas", "Blinxon", "Contact"]}/>
+          <Navbar titles={["About", "My work", "Blog", "Devdeas", "Blinxon", "Contact", "Login"]}/>
           <Switch>
             <Route path="/" exact component={props =>
               <div>

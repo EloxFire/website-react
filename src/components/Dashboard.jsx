@@ -16,19 +16,22 @@ class Dashboard extends Component{
       addSkillPercentage: "",
       addSkillLevel: "",
       addSkillLogo: "",
+      removeSkillName: "",
     }
 
 
     this.handleChangeIdeaSelectionCertification = this.handleChangeIdeaSelectionCertification.bind(this);// Idea Certification field
     this.handleChangeIdeaSelectionDecertification = this.handleChangeIdeaSelectionDecertification.bind(this);// Idea decertification field
-    this.handleChangeAddSkillName = this.handleChangeAddSkillName.bind(this) //Add skill name
-    this.handleChangeAddSkillPercentage = this.handleChangeAddSkillPercentage.bind(this) //Add skill name
-    this.handleChangeAddSkillLevel = this.handleChangeAddSkillLevel.bind(this) //Add skill name
-    this.handleChangeAddSkillLogo = this.handleChangeAddSkillLogo.bind(this) //Add skill name
+    this.handleChangeAddSkillName = this.handleChangeAddSkillName.bind(this) //Add skill name field
+    this.handleChangeAddSkillPercentage = this.handleChangeAddSkillPercentage.bind(this) //Add skill name field
+    this.handleChangeAddSkillLevel = this.handleChangeAddSkillLevel.bind(this) //Add skill name field
+    this.handleChangeAddSkillLogo = this.handleChangeAddSkillLogo.bind(this) //Add skill name field
+    this.handleChangeRemoveSkillName = this.handleChangeRemoveSkillName.bind(this);//Remove skill name field
 
     this.handleSubmitIdeaCertification = this.handleSubmitIdeaCertification.bind(this);// Idea Certification submit
     this.handleSubmitIdeaDecertification = this.handleSubmitIdeaDecertification.bind(this);// Idea decertification submit
     this.handleSubmitAddSkill = this.handleSubmitAddSkill.bind(this);// Add Skill submit
+    this.handleSubmitRemoveSkill = this.handleSubmitRemoveSkill.bind(this);// Remove skill submit
   }
 
   getDevdeasIdeas(){
@@ -160,6 +163,31 @@ class Dashboard extends Component{
   }
 
 
+  handleChangeRemoveSkillName(e){
+    this.setState({
+      removeSkillName: e.target.value
+    });
+  }
+  handleSubmitRemoveSkill(e){
+    e.preventDefault();
+
+    let removeSkill = {
+      name: this.state.removeSkillName,
+    }
+
+    axios.post('https://projects-enzoavagliano.fr:9000/removeskill', removeSkill)
+    .catch(err => console.log(err));
+
+    setTimeout(
+      function() {
+        window.location.reload(false);
+      }
+      .bind(this),
+      500
+    );
+  }
+
+
 
 
   componentDidMount(){
@@ -238,11 +266,33 @@ class Dashboard extends Component{
             <div className="mt-5">
               <form onSubmit={this.handleSubmitRemoveSkill}>
                 <div class="form-group">
-                  <label for="imputAddSkillName">Skill name</label>
-                  <input onChange={this.handleChangeRemoveSkillName} type="text" class="form-control" id="imputAddSkillName" placeholder="Skill name"/>
+                  <label for="imputRemoveSkillName">Skill name</label>
+                  <select onChange={this.handleChangeRemoveSkillName} id="imputRemoveSkillName" className="form-control form-control-sm">
+                    {
+                      this.state.skills.map(function(item, index){
+                        return(
+                          <option key={index}>{item.name}</option>
+                        )
+                      })
+                    }
+                  </select>
                 </div>
-                <button type="submit" className="btn btn-primary mb-2 bg-purple">Add new skill</button>
+                <button type="submit" className="btn btn-primary mb-2 bg-purple">Remove skill</button>
               </form>
+            </div>
+            <div className="mt-3">
+              <div className="ideasPanel col-12 col-lg-12 pt-3">
+                <h4 className="white">Skill list :</h4>
+                {
+                  this.state.skills.map(function(item, index){
+                    return(
+                      <li className="white mt-3" style={{listStyleType: "none",textTransform:"uppercase",fontWeight:"bold"}} key={index}>
+                        {item.name} <small className="white">{item.percentage}% / {item.level}</small>
+                      </li>
+                    )
+                  })
+                }
+              </div>
             </div>
           </div>
           <div className="tab-pane fade" id="v-pills-updateskills" role="tabpanel" aria-labelledby="v-pills-updateskills-tab">
