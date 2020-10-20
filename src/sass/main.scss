@@ -11,13 +11,42 @@ $height: 89.857142857vh;
 
 *{
   font-family: Montserrat !important;
-  color: $white;
+  color: $white !important;
+}
+
+.section{
+  min-height: $height !important;
+  background-color: $black !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: Ubuntu !important;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+span{
+  font-weight: bold !important;
+}
+
+label{
+  color: $white !important;
+}
+
+input, textarea, select{
+  background-color: rgba($white, 0.1) !important;
+  border: none !important;
+  outline: none !important;
+
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+[placeholder]{
+  color: $violet !important;
 }
 
 /* width */
@@ -40,4 +69,28 @@ h1, h2, h3, h4, h5, h6{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $white;
+}
+
+.bg-purple{
+  background-color: $violet !important;
+}
+.nav-pills > .active > a, .nav-pills > .active{
+  background-color: $violet !important;
+}
+
+.nav-pills > h4{
+  color: $white;
+  // border-bottom: 1px solid $violet;
+}
+
+.nav-pills > a,{
+  color: $white;
+}
+.white{
+  color: $white !important;
+}
+
+.bordered{
+  border-radius: 8px;
+  border: 2px solid $violet;
 }

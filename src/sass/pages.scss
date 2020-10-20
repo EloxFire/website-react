@@ -1,18 +1,12 @@
 @import "main.scss";
 
+#landing, #work, #dashboard, #login{
+  @extend .section;
+}
+
 .landing{
-  background-color: $violet;
   background-image: url("../img/stars.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 93vh;
-
-  h1,span{
-    color: $white !important;
-    font-weight: bold !important;
-  }
-
+  height: $height;
   .landing-logo{
     width: 150px;
   }
@@ -26,25 +20,6 @@
   }
 }
 
-.bg-purple{
-  background-color: $violet !important;
-}
-.nav-pills > .active > a, .nav-pills > .active{
-  background-color: $violet !important;
-}
-
-.nav-pills > h4{
-  color: $white;
-  // border-bottom: 1px solid $violet;
-}
-
-.nav-pills > a,{
-  color: $white;
-}
-.white{
-  color: $white !important;
-}
-
 .ideasPanel{
   border: 1px solid $violet;
   border-radius: 8px;
@@ -56,69 +31,6 @@
   height: 3vh;
   background-color: $violet;
   color: $white;
-}
-
-#login, #dashboard{
-  background-color: $black;
-  height: $height !important;
-
-  .border{
-    border: 2px solid $violet !important;
-    border-radius: 8px;
-  }
-
-  label, h2{
-    color: $white !important;
-  }
-
-  input, textarea, select{
-    background-color: rgba($white, 0.1) !important;
-    border: none !important;
-    outline: none !important;
-
-    &:focus{
-      box-shadow: none !important;
-    }
-  }
-  [placeholder]{
-    color: $violet !important;
-  }
-}
-
-#dashboard{
-  height: $height !important;
-  background-color: $black;
-  color: $white !important;
-
-  div, h2{
-    color: $white !important;
-  }
-}
-
-
-#work{
-  background-color: $black;
-  height: $height;
-  color: $white;
-
-  div{
-    color: $white;
-  }
-
-  .bordered{
-    color: $white;
-    border: 2px solid $violet;
-    border-radius: 8px;
-
-    span{
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-  }
-
-  .repo{
-    width: 25rem !important;
-  }
 }
 
 @media screen and (max-width:992px) {
