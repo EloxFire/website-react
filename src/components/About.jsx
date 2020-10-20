@@ -42,7 +42,6 @@ class About extends Component{
                 </p>
 
                 <a download href={resume}><button className="btn btn-primary btn-lg bg-purple m-1"><Icon.CloudDownloadFill color="white"/> Download my resume.</button></a>
-                <a href="https://enzoavagliano.fr/contact"><button className="btn btn-primary btn-lg bg-purple m-1"><Icon.TelephoneFill color="white"/> Contact me.</button></a>
               </div>
             </div>
           </div>

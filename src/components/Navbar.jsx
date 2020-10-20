@@ -19,7 +19,7 @@ const Navbar:React.FC<NavbarProps> = ({titles}) => (
         {titles.map(function(link, key){
           return(
             <li key={key} className="nav-item ml-2 ml-lg-0">
-              <a className="nav-link" href={link.toLowerCase().replace(/\s/g, '')}>{link}</a>
+              <a className="nav-link" href={`/${link.toLowerCase().replace(/\s/g, '')}`}>{link}</a>
             </li>
           )
         })}

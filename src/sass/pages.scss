@@ -10,6 +10,7 @@
 
   h1,span{
     color: $white !important;
+    font-weight: bold !important;
   }
 
   .landing-logo{
@@ -19,6 +20,10 @@
 
 .infosAbout{
   height: 70vh;
+  background-color: $black;
+  p, h1, h3, span h6{
+    color: $white !important;
+  }
 }
 
 .bg-purple{
@@ -87,6 +92,32 @@
 
   div, h2{
     color: $white !important;
+  }
+}
+
+
+#work{
+  background-color: $black;
+  height: $height;
+  color: $white;
+
+  div{
+    color: $white;
+  }
+
+  .bordered{
+    color: $white;
+    border: 2px solid $violet;
+    border-radius: 8px;
+
+    span{
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .repo{
+    width: 25rem !important;
   }
 }
 
