@@ -86,8 +86,7 @@ class Dashboard extends Component{
     setTimeout(
       function() {
         window.location.reload(false);
-      }
-      .bind(this),
+      },
       500
     );
   }
@@ -113,8 +112,7 @@ class Dashboard extends Component{
     setTimeout(
       function() {
         window.location.reload(false);
-      }
-      .bind(this),
+      },
       500
     );
   }
@@ -156,8 +154,7 @@ class Dashboard extends Component{
     setTimeout(
       function() {
         window.location.reload(false);
-      }
-      .bind(this),
+      },
       500
     );
   }
@@ -181,8 +178,7 @@ class Dashboard extends Component{
     setTimeout(
       function() {
         window.location.reload(false);
-      }
-      .bind(this),
+      },
       500
     );
   }

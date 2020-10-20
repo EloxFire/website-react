@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import * as BIcon from 'react-icons/bs';
 import * as FIcons from 'react-icons/fa';
 import Timestamp from 'react-timestamp';
 import '../sass/pages.scss';
