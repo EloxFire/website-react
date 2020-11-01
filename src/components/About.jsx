@@ -38,7 +38,7 @@ class About extends Component{
                 </div>
                 <p style={{fontWeight:"bold"}}>
                   I'm a 20 years old french computer engineering student in his 3rd year at Ynov Campus, in Aix-en-Provence. I'm very curious and want to learn very various things.
-                  <br/>I'm involved in many projects and try to develop mine. Having fun while being efficient is a prority in what I do.
+                  <br/>I try to develop my projects and I'm involved in many others. Having fun while being efficient is a prority to me.
                 </p>
 
                 <a download href={resume}><button className="btn btn-primary btn-lg bg-purple m-1"><Icon.CloudDownloadFill color="white"/> Download my resume.</button></a>

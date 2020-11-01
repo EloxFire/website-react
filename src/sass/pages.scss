@@ -26,6 +26,11 @@
   overflow: auto;
 }
 
+.bordered{
+  border: 2px solid $violet;
+  border-radius: 8px;
+}
+
 #footer{
   height: 3vh;
   background-color: $violet;
