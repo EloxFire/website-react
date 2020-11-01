@@ -197,7 +197,7 @@ class Dashboard extends Component{
     return(
       <div id="dashboard" className="d-flex flex-column flex-lg-row">
         <div className="col-12 col-lg-3 p-4">
-          <h2>Admin dashboard</h2>
+          <h2 className="white">Admin dashboard</h2>
           <div className="p-2 nav nav-pills flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <h4 className="mt-2">Skills</h4>
             <a className="nav-link active" id="v-pills-addskills-tab" data-toggle="pill" href="#v-pills-addskills" role="tab" aria-controls="v-pills-addskills" aria-selected="true">Add skills</a>
@@ -216,7 +216,7 @@ class Dashboard extends Component{
         </div>
         <div className="tab-content p-4 col-12 col-lg-9" id="v-pills-tabContent">
           <div className="tab-pane fade show active" id="v-pills-addskills" role="tabpanel" aria-labelledby="v-pills-addskills-tab">
-            <h2>Add new skill :</h2>
+            <h2 className="white">Add new skill :</h2>
             <div className="mt-5">
               <form onSubmit={this.handleSubmitAddSkill}>
                 <div class="form-group">
@@ -258,7 +258,7 @@ class Dashboard extends Component{
             </div>
           </div>
           <div className="tab-pane fade" id="v-pills-removeskills" role="tabpanel" aria-labelledby="v-pills-removeskills-tab">
-            <h2>Remove skill :</h2>
+            <h2 className="white">Remove skill :</h2>
             <div className="mt-5">
               <form onSubmit={this.handleSubmitRemoveSkill}>
                 <div class="form-group">
@@ -292,11 +292,11 @@ class Dashboard extends Component{
             </div>
           </div>
           <div className="tab-pane fade" id="v-pills-updateskills" role="tabpanel" aria-labelledby="v-pills-updateskills-tab">
-            <h2>Update skill :</h2>
+            <h2 className="white">Update skill :</h2>
           </div>
 
           <div className="tab-pane fade" id="v-pills-certifyideas" role="tabpanel" aria-labelledby="v-pills-certifyideas-tab">
-            <h2>Certify an idea :</h2>
+            <h2 className="white">Certify an idea :</h2>
             <div className="mt-5">
               <form onSubmit={this.handleSubmitIdeaCertification} className="form-inline">
                 <div className="form-group mx-sm-3 mb-2">
@@ -328,7 +328,7 @@ class Dashboard extends Component{
             </div>
           </div>
           <div className="tab-pane fade" id="v-pills-decertifyideas" role="tabpanel" aria-labelledby="v-pills-decertifyideas-tab">
-            <h2>Decertify an idea :</h2>
+            <h2 className="white">Decertify an idea :</h2>
             <div className="mt-5">
               <form onSubmit={this.handleSubmitIdeaDecertification} className="form-inline">
                 <div className="form-group mx-sm-3 mb-2">
@@ -360,14 +360,14 @@ class Dashboard extends Component{
             </div>
           </div>
           <div className="tab-pane fade" id="v-pills-removeideas" role="tabpanel" aria-labelledby="v-pills-removeideas-tab">
-            <h2>Remove an idea :</h2>
+            <h2 className="white">Remove an idea :</h2>
           </div>
           <div className="tab-pane fade" id="v-pills-updateideas" role="tabpanel" aria-labelledby="v-pills-updateideas-tab">
-            <h2>Update an idea :</h2>
+            <h2 className="white">Update an idea :</h2>
           </div>
 
           <div className="tab-pane fade" id="v-pills-updatetext" role="tabpanel" aria-labelledby="v-pills-updatetext-tab">
-            <h2>Update a text on the website :</h2>
+            <h2 className="white">Update a text on the website :</h2>
           </div>
         </div>
       </div>

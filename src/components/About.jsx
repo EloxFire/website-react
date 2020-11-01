@@ -21,8 +21,8 @@ class About extends Component{
           <div className="h-100 col-12 d-flex flex-column flex-lg-row align-items-center justify-content-center">
             <div className="mb-3 mb-lg-0 mr-lg-3"><img className="landing-logo" src={logo} alt="Enzo Avagliano' logo"/></div>
             <div className="d-flex flex-column align-items-center align-items-lg-start">
-              <h1>Enzo Avagliano</h1>
-              <span>Student | Junior web developer</span>
+              <h1 className="white">Enzo Avagliano</h1>
+              <span className="white">Student | Junior web developer</span>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ class About extends Component{
                 </div>
                 <p style={{fontWeight:"bold"}}>
                   I'm a 20 years old french computer engineering student in his 3rd year at Ynov Campus, in Aix-en-Provence. I'm very curious and want to learn very various things.
-                  <br/>I'm involved in many projects and try to develop mine. Fun, joy of life and efficiency are priorities in my work.
+                  <br/>I'm involved in many projects and try to develop mine. Having fun while being efficient is a prority in what I do.
                 </p>
 
                 <a download href={resume}><button className="btn btn-primary btn-lg bg-purple m-1"><Icon.CloudDownloadFill color="white"/> Download my resume.</button></a>

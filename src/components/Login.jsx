@@ -66,7 +66,7 @@ class Login extends Component{
     return(
       <div id="login" className="d-flex flex-column align-items-center justify-content-center">
         <div className="col-11 col-lg-5 p-5 border">
-          <h2 className="mb-5">Access admin dashboard</h2>
+          <h2 className="mb-5 white">Access admin dashboard</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="userName">Username</label>

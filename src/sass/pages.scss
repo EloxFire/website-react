@@ -13,8 +13,10 @@
 }
 
 .infosAbout{
-  height: 70vh;
-  background-color: $black;
+  min-height: 70vh;
+  height: auto;
+  margin-bottom: 2vh;
+  // background-color: $black;
 }
 
 .ideasPanel{
