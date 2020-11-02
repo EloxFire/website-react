@@ -8,7 +8,7 @@ $_POST = json_decode($rest_json, true);
 date_default_timezone_set('Europe/Paris');
 $date = date('m/d/Y h:i:s a', time());
 
-if (empty($_POST['username']) && empty($_POST['usermail'])){
+if (empty($_POST['username']) || empty($_POST['usermail']) || empty($_POST['usermessage'])){
   die();
   exit();
 }else if(!empty($_POST['username']) && !empty($_POST['usermail'])){
@@ -16,7 +16,7 @@ if (empty($_POST['username']) && empty($_POST['usermail'])){
   $subject = $_POST['userobject'];
   $to = "enzo.avagliano@ynov.com";
   $from = $_POST['usermail'];
-  $msg = "<p style='margin-top:20px;'>". $_POST['usermessage'] ."</p>";
+  $msg = "<p style='margin-top:20px;'></p>";
   $headers = "MIME-Version: 1.0\r\n";
 	$headers.= "Content-type: text/html; charset=UTF-8\r\n";
   // Starting message styling

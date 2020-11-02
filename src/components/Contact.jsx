@@ -22,7 +22,7 @@ class Contact extends Component{
     axios({
       method: 'post',
       url: `${API_PATH}`,
-      headers: {'content-type': 'application/json'},
+      headers: {'content-type': 'text/html'},
       data: this.state
     })
     .then(result => {
@@ -62,20 +62,20 @@ class Contact extends Component{
             <div className="form-row">
               <div className="form-group col-md-4">
                 <label className="required" htmlFor="inputMail">Your Email.</label>
-                <input type="email" className="form-control" id="inputMail" placeholder="Your mail adress goes here."/>
+                <input onChange={e => this.setState({usermail: e.target.value})} type="email" className="form-control" id="inputMail" placeholder="Your mail adress goes here."/>
               </div>
               <div className="form-group col-md-4">
                 <label className="required" htmlFor="inputName">Your name.</label>
-                <input type="text" className="form-control" id="inputName" placeholder="Your name goes here."/>
+                <input onChange={e => this.setState({username: e.target.value})} type="text" className="form-control" id="inputName" placeholder="Your name goes here."/>
               </div>
               <div className="form-group col-md-4">
                 <label htmlFor="inputSubject">The subject.</label>
-                <input type="text" className="form-control" id="inputSubject" placeholder="Enter a subject"/>
+                <input onChange={e => this.setState({userobject: e.target.value})} type="text" className="form-control" id="inputSubject" placeholder="Enter a subject"/>
               </div>
             </div>
             <div className="form-group">
               <label className="required" htmlFor="inputMessage">Your message.</label>
-              <textarea className="form-control" id="inputMessage" rows="6" placeholder="Your message goes here."></textarea>
+              <textarea onChange={e => this.setState({usermessage: e.target.value})} className="form-control" id="inputMessage" rows="6" placeholder="Your message goes here."></textarea>
             </div>
             <button onClick={e => this.handleFormSubmit(e)} type="submit" className="btn btn-primary bg-purple">Send message</button>
           </form>
