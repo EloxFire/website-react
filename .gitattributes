@@ -1,2 +1,6 @@
 *.js linguist-detectable=false
 *.jsx linguist-detectable=true
+./App.test.js
+./index.js
+./serviceWorker.js
+./setupTests.js
