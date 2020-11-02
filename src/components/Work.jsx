@@ -108,7 +108,7 @@ class Work extends Component {
                       <p><FIcons.FaRedo/> : <Timestamp relative date={item.updated_at}/></p>
                     </div>
                     <div className="repo-footer">
-                      <a className="nav-link white" target="_blank" href={item.html_url}>View on <FIcons.FaGithub/></a>
+                      <a className="nav-link white" target="_blank" rel="noopener noreferrer" href={item.html_url}>View on <FIcons.FaGithub/></a>
                     </div>
                   </div>
                 )

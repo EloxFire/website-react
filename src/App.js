@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Footer from './components/Footer';
 import Work from './components/Work';
+import Contact from './components/Contact';
 
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
@@ -53,6 +54,12 @@ class App extends Component{
             <Route path="/mywork" component={props =>
               <div>
                 <Work/>
+              </div>
+            }/>
+
+            <Route path="/contact" component={props =>
+              <div>
+                <Contact/>
               </div>
             }/>
 

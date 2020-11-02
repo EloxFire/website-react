@@ -1,6 +1,6 @@
 @import "main.scss";
 
-#landing, #work, #dashboard, #login{
+#landing, #work, #dashboard, #login, #contact{
   @extend .section;
 }
 
@@ -16,7 +16,6 @@
   min-height: 70vh;
   height: auto;
   margin-bottom: 2vh;
-  // background-color: $black;
 }
 
 .ideasPanel{
@@ -62,6 +61,23 @@
 
   .nav-link:hover{
     text-decoration: underline;
+  }
+}
+
+.required::after{
+  content: " *";
+  color: red;
+}
+
+.querry{
+  border-bottom: 2px solid $violet;
+
+  .ok{
+    color: green;
+  }
+
+  .notok{
+    color: red;
   }
 }
 
