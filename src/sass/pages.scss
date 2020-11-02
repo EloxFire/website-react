@@ -31,6 +31,40 @@
   border-radius: 8px;
 }
 
+.repo-card{
+  border: 2px solid $violet;
+  border-radius: 8px;
+  width: 18rem !important;
+  height: 40vh !important;
+
+  .repo-header{
+    height: 10%;
+    border-bottom: 1px solid $white;
+  }
+
+  .repo-body{
+    height: 60%;
+    overflow: auto;
+  }
+
+  .repo-lang{
+    height: 10%;
+  }
+
+  .repo-update{
+    height: 10%;
+    border-bottom: 1px solid $white;
+  }
+
+  .repo-footer{
+    height: 10%;
+  }
+
+  .nav-link:hover{
+    text-decoration: underline;
+  }
+}
+
 #footer{
   height: 3vh;
   background-color: $violet;
