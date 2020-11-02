@@ -1,9 +1,12 @@
-<?php
+'<?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT, GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
+
+date_default_timezone_set('Europe/Paris');
+$date = date('m/d/Y h:i:s a', time());
 
 if (empty($_POST['username']) && empty($_POST['usermail'])){
   die();
@@ -17,12 +20,19 @@ if (empty($_POST['username']) && empty($_POST['usermail'])){
   $headers = "MIME-Version: 1.0\r\n";
 	$headers.= "Content-type: text/html; charset=UTF-8\r\n";
   // Starting message styling
-  $headers.= "<h1>Nouveau message depuis <pre>enzoavagliano.fr</pre> !</h1>";
-  $headers.= "<h4 style='margin:0;'>Email : " . $from . "</h4>";
-  $headers.= "<h4 style='margin:0;'>Autheur : " . $_POST['username'] . "</h4>";
-  $headers.= "<h4 style='margin:0;'>Objet : " . $subject . "</h4>";
-  $headers.= "<br/>";
-  
+  $headers.= "<p style='text-align: center;'><strong>NOUVEAU <span style='color: #9146ff;'>MESSAGE</span> DEPUIS ENZOAVAGLIANO.fr</strong></p>";
+  $headers.="<p style='text-align: center;'><span style='color: #9146ff;'><strong>_______________________________________</strong></span></p>";
+  $headers.="<p style='text-align: center;'>&nbsp;</p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>Nouveau message provenant du formulaire de contact.</span></p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Adresse mail &eacute;m&eacute;trice :" . $_POST['usermail'] . "</span></p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Objet du message : " . $_POST['userobject'] . "</span></p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Date d'envoi : " . $date . "</span></p>";
+  $headers.="<p style='text-align: left;'>&nbsp;</p>";
+  $headers.="<p style='text-align: left;'><span style='color: #9146ff;'>___________________&nbsp;</span></p>";
+  $headers.="<p style='text-align: left;'><span style='color: #9146ff;'><strong>MESSAGE :</strong></span></p>";
+  $headers.="<p style='text-align: left;'>&nbsp; " . $_POST['usermessage'] . "</p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>___________________&nbsp;</span></p>";
+
   mail($to, $subject, $msg, $headers);
   echojson_encode(array(
     "sent" => true
