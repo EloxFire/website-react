@@ -6,6 +6,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Work from './components/Work';
 import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
@@ -72,6 +73,12 @@ class App extends Component{
             <Route path="/admin/dash" component={props =>
               <div>
                 <Dashboard/>
+              </div>
+            }/>
+
+            <Route component={props =>
+              <div>
+                <NotFound/>
               </div>
             }/>
           </Switch>

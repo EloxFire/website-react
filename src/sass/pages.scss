@@ -1,6 +1,6 @@
 @import "main.scss";
 
-#landing, #work, #dashboard, #login, #contact{
+#landing, #work, #dashboard, #login, #contact, #notfound{
   @extend .section;
 }
 
@@ -87,6 +87,25 @@
   color: $white;
 }
 
+#notfound{
+  .notFoundTitle{
+    font-size: 6em;
+
+    .notFoundSpan{
+      font-size: 20%;
+    }
+  }
+  .notFoundLink{
+    background-color: $white;
+    color: $black;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 @media screen and (max-width:992px) {
   .landing{
     height: 88vh !important;
@@ -103,5 +122,15 @@
   }
   h3{
     font-size: 160% !important;
+  }
+
+  #notfound{
+    min-height: 80vh !important;
+    .notFoundTitle{
+      font-size: 6em !important;
+    }
+    .notFoundSentence{
+      font-size: 1.2em !important;
+    }
   }
 }
