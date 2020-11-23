@@ -21,8 +21,8 @@ class About extends Component{
           <div className="h-100 col-12 d-flex flex-column flex-lg-row align-items-center justify-content-center">
             <div className="mb-3 mb-lg-0 mr-lg-3"><img className="landing-logo" src={logo} alt="Enzo Avagliano' logo"/></div>
             <div className="d-flex flex-column align-items-center align-items-lg-start">
-              <h1 className="white">Enzo Avagliano</h1>
-              <span className="white">Student | Junior web developer</span>
+              <h1 id="main-title" className="white">Enzo Avagliano</h1>
+              <span id="subtitle" className="white">Student | Junior web developer</span>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ class About extends Component{
           <div className="col-12 col-lg-6 p-3 d-flex flex-column align-items-center align-items-lg-start justify-content-center">
             <Title title="My main skills"/>
             <div className="h-75 w-100 d-flex flex-column">
-              <div className="d-flex flex-column h-100 justify-content-around">
+              <div className="comps-container d-flex flex-column h-100 justify-content-around">
                 {/*Niveaux : 0 - 30 Débutant 35 - 65 Intermétiaire 65 - 100 - Avancé*/}
                 <Progressbar title="Levels legend" value="100" level="0-35% = Beginner | 35-65% = Intermediate | 65-100% = Advanced"/>
                 <Progressbar title="ReactJS" logo="react.svg" value="65" level="Intermediate"/>

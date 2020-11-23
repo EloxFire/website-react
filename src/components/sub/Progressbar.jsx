@@ -7,7 +7,7 @@ function Progressbar(props){
   }
 
   return(
-    <div>
+    <div id="bar">
       <h6>{props.title} {props.logo == null && <span></span>} {props.logo != null && <img style={{maxHeight:"1.5em"}} src={require(`../../img/logos/${props.logo}`)} alt={props.title}/>}</h6>
       <div className="progress">
         <div className="progress-bar bg-purple" role="progressbar" style={styleProgress} aria-valuenow={props.value} aria-valuemin="0" thisaria-valuemax="100">Level : {props.level}</div>
