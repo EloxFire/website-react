@@ -9,6 +9,10 @@ date_default_timezone_set('Europe/Paris');
 $date = date('m/d/Y h:i:s a', time());
 
 if (empty($_POST['username']) || empty($_POST['usermail']) || empty($_POST['usermessage'])){
+  echojson_encode(array(
+    "sent" => false
+  ));
+  echo "One or more fields are not filled !";
   die();
   exit();
 }else if(!empty($_POST['username']) && !empty($_POST['usermail'])){
@@ -24,7 +28,7 @@ if (empty($_POST['username']) || empty($_POST['usermail']) || empty($_POST['user
   $headers.="<p style='text-align: center;'><span style='color: #9146ff;'><strong>_______________________________________</strong></span></p>";
   $headers.="<p style='text-align: center;'>&nbsp;</p>";
   $headers.="<p style='text-align: left;'><span style='color: #000000;'>Nouveau message provenant du formulaire de contact.</span></p>";
-  $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Adresse mail &eacute;m&eacute;trice :" . $_POST['usermail'] . "</span></p>";
+  $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Adresse mail &eacute;m&eacute;trice : " . $_POST['usermail'] . "</span></p>";
   $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Objet du message : " . $_POST['userobject'] . "</span></p>";
   $headers.="<p style='text-align: left;'><span style='color: #000000;'>- Date d'envoi : " . $date . "</span></p>";
   $headers.="<p style='text-align: left;'>&nbsp;</p>";
