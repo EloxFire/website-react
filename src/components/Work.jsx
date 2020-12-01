@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as FIcons from "react-icons/fa";
 import Timestamp from "react-timestamp";
-import "../sass/pages.scss";
+import "../sass/home.scss";
 
 class Work extends Component {
   constructor(props) {

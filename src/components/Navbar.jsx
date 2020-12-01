@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../img/logos/ea.svg';
+import logo from '../img/logos/ea_black.png';
 import '../sass/navbar.scss';
 
 class Navbar extends Component{

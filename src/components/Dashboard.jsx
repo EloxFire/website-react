@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import '../sass/pages.scss';
+import '../sass/home.scss';
 
 class Dashboard extends Component{
   constructor(props){
