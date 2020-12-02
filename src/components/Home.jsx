@@ -14,7 +14,7 @@ function Home({ t }){
     <div id="home" className="">
       <div className="d-flex flex-column align-items-center">
         <LangSelector/>
-        {t('welcome.test')}
+        {t('welcome')}
       </div>
     </div>
   )
