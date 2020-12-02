@@ -14,7 +14,11 @@ function Home({ t }){
     <div id="home" className="">
       <div className="d-flex flex-column align-items-center">
         <LangSelector/>
-        {t('welcome')}
+        <div className="test d-flex flex-column justify-content-center">
+          <h1><span>Enzo Avagliano</span></h1>
+          <h1><span>Développeur freelance</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quasi ducimus eos, ab id error architecto, vel quae, non et repellat minus iste asperiores qui saepe voluptas ad, necessitatibus assumenda.</p>
+        </div>
       </div>
     </div>
   )

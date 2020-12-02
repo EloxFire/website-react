@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 
-import logo from '../img/logos/ea_black.png';
+import logo from '../img/logos/ea.svg';
 import '../sass/navbar.scss';
 
 function Navbar({ t }){
