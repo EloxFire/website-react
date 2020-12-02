@@ -10,7 +10,7 @@ class App extends Component{
 
   render(){
     return (
-      <div id="website">
+      <div id="website" className="">
         <Router>
 
           <Navbar/>
