@@ -1,0 +1,24 @@
+@import "main.scss";
+
+button{
+  background-color: transparent;
+  border: none;
+
+  &:focus{
+    border: none;
+    outline: none;
+  }
+}
+
+.lang-item::before{
+  content: "";
+  border-left: 2px solid $white;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width:992px) {
+  .lang-item::before{
+    content: "";
+    border: none;
+  }
+}

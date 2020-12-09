@@ -2,16 +2,4 @@
 
 #home{
   @extend .section;
-
-  .test{
-    height: 70vh !important;
-    width: 90%;
-    color: $white !important;
-
-    span{
-      background-color: rgba($violet, 1);
-      padding: 5px;
-      // border-radius: 8px;
-    }
-  }
 }

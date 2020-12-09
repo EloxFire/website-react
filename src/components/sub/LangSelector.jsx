@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import i18n from "i18next";
 import { withNamespaces } from 'react-i18next';
+import '../../sass/langSelector.scss';
 
-function LangSelector({ t }){
+function LangSelector(){
+  const [lang, setLang] = useState('fr');
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  }
+  const handleClickLang = () => {
+    if (lang === "fr") {
+      setLang("en");
+      i18n.changeLanguage('en');
+    } else {
+      setLang("fr");
+      i18n.changeLanguage('fr');
+    }
+  };
 
   return(
-    <div>
-      <button onClick={() => changeLanguage(`fr`)}>fr</button>
-      <button onClick={() => changeLanguage(`en`)}>en</button>
-    </div>
+    <button class="nav-item lang-item" onClick={handleClickLang}>
+      🇫🇷 / 🇬🇧
+    </button>
   )
 }
 

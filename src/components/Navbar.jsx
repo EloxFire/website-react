@@ -1,5 +1,6 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
+import LangSelector from './sub/LangSelector';
 
 import logo from '../img/logos/ea.svg';
 import '../sass/navbar.scss';
@@ -44,10 +45,11 @@ function Navbar({ t }){
         </div>
         <div>
           <ul className="navbar-nav mt-2 mt-lg-0">
-            <div>
-              <li className="nav-item active">
+            <div className="d-flex flex-column flex-lg-row">
+              <li className="nav-item">
                 <a className="nav-link animated-nav-link" href="/contact">{t('navbar.contact')}</a>
               </li>
+              <LangSelector/>
             </div>
           </ul>
         </div>

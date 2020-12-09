@@ -27,6 +27,12 @@ class App extends Component{
               </div>
             }/>
 
+            <Route path="/test" component={props =>
+              <div>
+                test
+              </div>
+            }/>
+
             <Route path='/devdeas' component={() => {
               window.location.href = 'https://devdeas.enzoavagliano.fr';
               return null;
